@@ -1,5 +1,6 @@
 package com.cachecats.meituan.app.mine;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -30,6 +31,11 @@ public class MineFragment extends BaseFragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         //View view = inflater.inflate(R.layout.fragment_mine, null);
         View view = inflater.inflate(R.layout.activity_login, null);
+
+        Intent intent = new Intent(getActivity().getApplicationContext(),LoginPage.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK );
+        getActivity().getApplicationContext().startActivity(intent);
+
         return view;
 
     }
