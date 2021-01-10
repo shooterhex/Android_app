@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/LikeMeiTuan-master.iml" filepath="$PROJECT_DIR$/.idea/modules/LikeMeiTuan-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/LikeMeiTuan-master.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/LikeMeiTuan-master.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/LikeMeiTuan-master.common.iml" filepath="$PROJECT_DIR$/.idea/modules/common/LikeMeiTuan-master.common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/data/LikeMeiTuan-master.data.iml" filepath="$PROJECT_DIR$/.idea/modules/data/LikeMeiTuan-master.data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/domin/LikeMeiTuan-master.domin.iml" filepath="$PROJECT_DIR$/.idea/modules/domin/LikeMeiTuan-master.domin.iml" />
+    </modules>
+  </component>
+</project>
