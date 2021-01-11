@@ -29,8 +29,8 @@ public class MineFragment extends BaseFragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        //View view = inflater.inflate(R.layout.fragment_mine, null);
-        View view = inflater.inflate(R.layout.activity_login, null);
+        View view = inflater.inflate(R.layout.fragment_mine, null);
+        //View view = inflater.inflate(R.layout.activity_login, null);
 
         Intent intent = new Intent(getActivity().getApplicationContext(),Login.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK );
