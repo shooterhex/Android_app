@@ -25,9 +25,20 @@
         </activity>
 
 
-        <activity android:name=".app.mine.LoginPage">
+        <activity android:name=".app.mine.LoginPage"
+            android:label="用户登录">
         </activity>
 
+        <activity android:name=".app.mine.Login"
+            android:label="用户登录">
+        </activity>
+
+        <activity android:name=".app.mine.User"
+            android:label="个人中心"/>
+        <activity android:name=".app.mine.Register"
+            android:label="用户注册"/>
+        <activity android:name=".app.mine.Resetpwd"
+            android:label="密码修改"></activity>
 
     </application>
 

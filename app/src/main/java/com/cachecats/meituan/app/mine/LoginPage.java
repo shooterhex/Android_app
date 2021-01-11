@@ -16,6 +16,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.cachecats.meituan.R;
+import com.orhanobut.logger.Logger;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -53,6 +54,7 @@ public class  LoginPage extends AppCompatActivity {
                     username=mUsername.getText().toString();
                     password=mPassWord.getText().toString();
                     File file = new File(getFilesDir(),"info.txt");     //写内部存储到info.txt文件
+                    Logger.d("CLICKING!!!");
                     FileOutputStream fos= null;     //创建输出流
                     try {
                         fos = new FileOutputStream(file);
