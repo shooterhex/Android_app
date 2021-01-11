@@ -32,7 +32,7 @@ public class MineFragment extends BaseFragment {
         //View view = inflater.inflate(R.layout.fragment_mine, null);
         View view = inflater.inflate(R.layout.activity_login, null);
 
-        Intent intent = new Intent(getActivity().getApplicationContext(),LoginPage.class);
+        Intent intent = new Intent(getActivity().getApplicationContext(),Login.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK );
         getActivity().getApplicationContext().startActivity(intent);
 
