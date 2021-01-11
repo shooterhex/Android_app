@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/LikeMeiTuan-master.iml" filepath="$PROJECT_DIR$/.idea/modules/LikeMeiTuan-master.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/LikeMeiTuan-master.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/LikeMeiTuan-master.app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/LikeMeiTuan-master.common.iml" filepath="$PROJECT_DIR$/.idea/modules/common/LikeMeiTuan-master.common.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/data/LikeMeiTuan-master.data.iml" filepath="$PROJECT_DIR$/.idea/modules/data/LikeMeiTuan-master.data.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/domin/LikeMeiTuan-master.domin.iml" filepath="$PROJECT_DIR$/.idea/modules/domin/LikeMeiTuan-master.domin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/android_app.iml" filepath="$PROJECT_DIR$/.idea/android_app.iml" group="android_app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="android_app/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/common.iml" filepath="$PROJECT_DIR$/.idea/modules/common/common.iml" group="android_app/common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/data/data.iml" filepath="$PROJECT_DIR$/.idea/modules/data/data.iml" group="android_app/data" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/domin/domin.iml" filepath="$PROJECT_DIR$/.idea/modules/domin/domin.iml" group="android_app/domin" />
     </modules>
   </component>
 </project>

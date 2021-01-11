@@ -21,3 +21,5 @@ public interface ActivityComponent {
     void inject(HomeFragment fragment);
 
 }
+
+
