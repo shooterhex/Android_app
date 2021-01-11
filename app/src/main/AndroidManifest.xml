@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.cachecats.meituan">
+    package="com.cachecats.PetPet">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -12,11 +12,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-        android:name=".MyApplication"
+        android:name="com.cachecats.PetPet.MyApplication"
         >
 
-        <activity android:name=".base.BaseActivity" />
-        <activity android:name=".app.MainActivity">
+        <activity android:name="com.cachecats.PetPet.base.BaseActivity" />
+        <activity android:name="com.cachecats.PetPet.app.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,19 +25,19 @@
         </activity>
 
 
-        <activity android:name=".app.mine.Login"
+        <activity android:name="com.cachecats.PetPet.app.mine.Login"
             android:label="用户登录">
         </activity>
 
-        <activity android:name=".app.mine.User"
+        <activity android:name="com.cachecats.PetPet.app.mine.User"
             android:label="个人中心">
         </activity>
 
-        <activity android:name=".app.mine.Register"
+        <activity android:name="com.cachecats.PetPet.app.mine.Register"
             android:label="用户注册">
         </activity>
 
-        <activity android:name=".app.mine.Resetpwd"
+        <activity android:name="com.cachecats.PetPet.app.mine.Resetpwd"
             android:label="密码修改">
         </activity>
 

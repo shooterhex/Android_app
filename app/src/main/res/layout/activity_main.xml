@@ -5,9 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.cachecats.meituan.app.MainActivity">
+    tools:context="com.cachecats.PetPet.app.MainActivity">
 
-    <com.cachecats.meituan.widget.bottomtab.CustomBottomTabWidget
+    <com.cachecats.PetPet.widget.bottomtab.CustomBottomTabWidget
         android:id="@+id/tabWidget"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
