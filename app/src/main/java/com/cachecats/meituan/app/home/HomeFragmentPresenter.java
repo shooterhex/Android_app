@@ -27,16 +27,16 @@ public class HomeFragmentPresenter implements HomeFragmentContract.Presenter {
 
     //大模块的图片数组
     private static final int[] bigModuleDrawables = {
-            R.mipmap.homepage_icon_light_food_b,
-            R.mipmap.homepage_icon_light_movie_b,
-            R.mipmap.homepage_icon_light_hotel_b,
-            R.mipmap.homepage_icon_light_amusement_b,
-            R.mipmap.homepage_icon_light_takeout_b,
+            R.mipmap.homepage_icon_my_pet,
+            R.mipmap.homepage_icon_community,
+            R.mipmap.homepage_icon_knowledge,
+            R.mipmap.homepage_icon_shop,
+            R.mipmap.homepage_icon_hospital,
     };
 
     //大模块的标题数组
     private static final String[] bigMudoleTitles = {
-            "美食", "电影/演出", "酒店住宿", "休闲娱乐", "外卖"
+            "我的宠物", "宠物社区", "宠物宝典", "养宠必备", "宠物医院"
     };
 
     private HomeFragmentContract.View mFragment;
@@ -208,16 +208,16 @@ public class HomeFragmentPresenter implements HomeFragmentContract.Presenter {
     @Override
     public List<IconTitleModel> getIconTitleModels() {
         List<IconTitleModel> datas = new ArrayList<>();
-        datas.add(new IconTitleModel(R.mipmap.homepage_icon_light_ktv_s, "KTV"));
-        datas.add(new IconTitleModel(R.mipmap.homepage_icon_light_toursaround_s, "周边游"));
-        datas.add(new IconTitleModel(R.mipmap.homepage_icon_light_transportation_s, "机票/火车票"));
-        datas.add(new IconTitleModel(R.mipmap.homepage_icon_light_beauty_s, "丽人/美发"));
-        datas.add(new IconTitleModel(R.mipmap.homepage_icon_light_travel_s, "旅游/出行"));
-        datas.add(new IconTitleModel(R.mipmap.homepage_icon_light_fitness_s, "跑腿/代购"));
-        datas.add(new IconTitleModel(R.mipmap.homepage_icon_light_amusement_s, "景点/门票"));
-        datas.add(new IconTitleModel(R.mipmap.homepage_icon_light_bath_s, "温泉"));
-        datas.add(new IconTitleModel(R.mipmap.homepage_icon_light_lifeservice_s, "榛果民宿"));
-        datas.add(new IconTitleModel(R.mipmap.homepage_icon_light_more_s, "全部分类"));
+        datas.add(new IconTitleModel(R.mipmap.homepage_icon_live, "宠物直播"));
+        datas.add(new IconTitleModel(R.mipmap.homepage_icon_score, "赚积分"));
+        datas.add(new IconTitleModel(R.mipmap.homepage_icon_notice, "提醒"));
+        datas.add(new IconTitleModel(R.mipmap.homepage_icon_pay, "记账"));
+        datas.add(new IconTitleModel(R.mipmap.homepage_icon_adopt, "寄养"));
+        datas.add(new IconTitleModel(R.mipmap.homepage_icon_card, "萌宠卡"));
+        datas.add(new IconTitleModel(R.mipmap.homepage_icon_health, "营养师"));
+        datas.add(new IconTitleModel(R.mipmap.homepage_icon_bath, "美容洗澡"));
+        datas.add(new IconTitleModel(R.mipmap.homepage_icon_food, "能不能吃"));
+        datas.add(new IconTitleModel(R.mipmap.homepage_icon_ill, "病症自查"));
         return datas;
     }
 
