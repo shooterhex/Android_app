@@ -12,6 +12,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 
 import java.util.List;
+import java.util.logging.Logger;
 
 /**
  * Created by solo on 2018/1/29.
@@ -48,4 +49,8 @@ public class ShopListAdapter extends BaseQuickAdapter<ShopModel,BaseViewHolder> 
         }
 
     }
+
+
+
+
 }

@@ -7,11 +7,13 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
+import com.cachecats.domin.shop.model.ShopGroupInfoModel;
 import com.cachecats.domin.shop.model.ShopModel;
 import com.cachecats.PetPet.MyApplication;
 import com.cachecats.PetPet.R;
@@ -29,6 +31,7 @@ import com.cachecats.PetPet.widget.IconTitleView;
 import com.cachecats.PetPet.widget.decoration.DividerItemDecoration;
 import com.cachecats.PetPet.widget.decoration.HomeGridDecoration;
 import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.orhanobut.logger.Logger;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshFooter;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
@@ -37,6 +40,7 @@ import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 import com.youth.banner.Transformer;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -74,7 +78,6 @@ public class HomeFragment extends BaseFragment implements HomeFragmentContract.V
 
     private ShopListAdapter mShopListAdapter;
     private List<ShopModel> mShopModels = Collections.emptyList();
-
 
     @Nullable
     @Override
@@ -173,8 +176,12 @@ public class HomeFragment extends BaseFragment implements HomeFragmentContract.V
         rvShopList.setLayoutManager(lm);
         rvShopList.addItemDecoration(new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL_LIST));
         rvShopList.setItemAnimator(new DefaultItemAnimator());
+
+        //创建临时例子
+        //mShopModels = CreateExampleShopItem();
+
         mShopListAdapter = new ShopListAdapter(getActivity(), R.layout.item_home_shop_list, mShopModels);
-//        mShopListAdapter.setUpFetchEnable(true);
+        //mShopListAdapter.setUpFetchEnable(true);
         rvShopList.setAdapter(mShopListAdapter);
 //        mShopListAdapter.setEmptyView();
     }
@@ -283,4 +290,24 @@ public class HomeFragment extends BaseFragment implements HomeFragmentContract.V
         super.onDestroy();
         presenter.onDestroy();
     }
+
+//    public ArrayList<ShopModel> CreateExampleShopItem() {
+//        ShopModel m = new ShopModel();
+//        m.setAddress("西湖区灵隐街道浙大路38号");
+//        m.setLogo("pet_icon.png");
+//        m.setName("无恙宠物店");
+//        ArrayList<ShopGroupInfoModel> ginf = new ArrayList<ShopGroupInfoModel>();
+//
+//        ShopGroupInfoModel inf = new ShopGroupInfoModel();
+//        inf.setCurrentPrice(100);
+//        inf.setOriginalPrice(1000);
+//        inf.setSoldNum(9999);
+//
+//        ginf.add(inf);
+//
+//        m.setGroupInfos(ginf);
+//        ArrayList<ShopModel>Lm = new ArrayList<ShopModel>();
+//        Lm.add(m);
+//        return Lm;
+//    }
 }

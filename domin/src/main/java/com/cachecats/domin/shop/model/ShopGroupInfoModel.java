@@ -3,10 +3,7 @@ package com.cachecats.domin.shop.model;
 import java.io.Serializable;
 import java.util.List;
 
-/**
- * Created by solo on 2018/1/25.
- * 店铺的团购信息表对应的model
- */
+
 
 public class ShopGroupInfoModel implements Serializable {
 

@@ -4,7 +4,6 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * Created by solo on 2018/1/18.
  * 商店对应的 model
  */
 
@@ -20,6 +19,7 @@ public class ShopModel implements Serializable{
     private String introduction;
     private String recommendDishes;
     private List<ShopGroupInfoModel> groupInfos;
+
 
     @Override
     public String toString() {
