@@ -9,10 +9,6 @@ import com.chad.library.adapter.base.BaseViewHolder;
 
 import java.util.List;
 
-/**
- * Created by solo on 2018/1/11.
- */
-
 public class LittleModuleAdapter extends BaseQuickAdapter<IconTitleModel, BaseViewHolder> {
 
     private List<IconTitleModel> list;

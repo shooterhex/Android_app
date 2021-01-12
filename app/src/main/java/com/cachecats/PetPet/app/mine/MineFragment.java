@@ -14,10 +14,6 @@ import com.cachecats.PetPet.base.BaseFragment;
 
 import butterknife.BindView;
 
-/**
- * Created by solo on 2018/1/8.
- */
-
 public class MineFragment extends BaseFragment {
 
 

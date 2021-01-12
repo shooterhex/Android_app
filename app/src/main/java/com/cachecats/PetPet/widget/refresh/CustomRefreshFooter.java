@@ -13,11 +13,6 @@ import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.constant.RefreshState;
 import com.scwang.smartrefresh.layout.constant.SpinnerStyle;
 
-/**
- * Created by solo on 2018/2/1.
- * SmartRefreshLayout的自定义Footer
- */
-
 public class CustomRefreshFooter extends LinearLayout implements RefreshFooter {
 
     public CustomRefreshFooter(Context context, String text) {

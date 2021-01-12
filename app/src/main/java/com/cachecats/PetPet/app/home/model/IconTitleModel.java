@@ -1,7 +1,5 @@
 package com.cachecats.PetPet.app.home.model;
 
-
-
 public class IconTitleModel {
 
     private int iconResource;

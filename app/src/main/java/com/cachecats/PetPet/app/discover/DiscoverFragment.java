@@ -16,10 +16,6 @@ import android.app.Activity;
 import com.cachecats.PetPet.R;
 import com.cachecats.PetPet.base.BaseFragment;
 
-/**
- * Created by solo on 2018/1/8.
- */
-
 public class DiscoverFragment extends BaseFragment {
 
     @Nullable

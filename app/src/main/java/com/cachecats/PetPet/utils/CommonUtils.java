@@ -4,10 +4,6 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.util.DisplayMetrics;
 
-/**
- * Created by solo on 2018/1/9.
- */
-
 public class CommonUtils {
 
     public static int getScreenWidth(Context context){

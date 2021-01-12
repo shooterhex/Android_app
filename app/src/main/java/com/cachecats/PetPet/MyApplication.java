@@ -13,10 +13,6 @@ import com.orhanobut.logger.Logger;
 import com.orhanobut.logger.PrettyFormatStrategy;
 import com.raizlabs.android.dbflow.config.FlowManager;
 
-/**
- * Created by solo on 2018/1/7.
- */
-
 public class MyApplication extends Application {
 
     private static Context mContext;

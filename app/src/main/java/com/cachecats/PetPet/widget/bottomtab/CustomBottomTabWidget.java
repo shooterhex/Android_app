@@ -17,10 +17,6 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-/**
- * Created by solo on 2018/1/7.
- */
-
 public class CustomBottomTabWidget extends LinearLayout {
 
     @BindView(R.id.ll_menu_home_page)

@@ -16,11 +16,6 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-/**
- * Created by solo on 2018/1/15.
- * 主页的四个广告图片
- */
-
 public class HomeAdsView extends LinearLayout {
 
     @BindView(R.id.ads_1)

@@ -6,10 +6,6 @@ import android.view.View;
 
 import com.cachecats.PetPet.utils.DensityUtils;
 
-/**
- * Created by solo on 2018/1/11.
- */
-
 public class HomeGridDecoration extends RecyclerView.ItemDecoration {
 
     private float space;

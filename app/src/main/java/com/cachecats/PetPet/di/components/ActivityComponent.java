@@ -7,10 +7,6 @@ import com.cachecats.PetPet.di.scopes.Scopes;
 
 import dagger.Component;
 
-/**
- * Created by solo on 2018/1/10.
- */
-
 @Scopes.Activity
 @Component(modules = {ActivityModule.class}, dependencies = {ApplicationComponent.class})
 public interface ActivityComponent {

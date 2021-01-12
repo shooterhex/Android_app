@@ -8,10 +8,6 @@ import com.scwang.smartrefresh.layout.api.RefreshFooter;
 
 import java.util.List;
 
-/**
- * Created by solo on 2018/1/10.
- */
-
 public interface HomeFragmentContract {
 
     interface View {
