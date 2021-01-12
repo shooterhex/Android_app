@@ -1,10 +1,5 @@
 package com.cachecats.PetPet.app.home.model;
 
-/**
- * Created by solo on 2018/1/11.
- * 图标和标题的model
- */
-
 public class IconTitleModel {
 
     private int iconResource;

@@ -13,10 +13,6 @@ import com.chad.library.adapter.base.BaseViewHolder;
 
 import java.util.List;
 
-/**
- * Created by solo on 2018/1/29.
- */
-
 public class ShopListAdapter extends BaseQuickAdapter<ShopModel,BaseViewHolder> {
 
     private Context context;

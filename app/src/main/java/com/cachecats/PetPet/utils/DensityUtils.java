@@ -2,11 +2,6 @@ package com.cachecats.PetPet.utils;
 
 import com.cachecats.PetPet.MyApplication;
 
-/**
- * Created by solo on 2018/1/11.
- * 各种像素单位的转换工具类
- */
-
 public class DensityUtils {
     /**
      * 根据手机的分辨率从 dip 的单位 转成为 px(像素)

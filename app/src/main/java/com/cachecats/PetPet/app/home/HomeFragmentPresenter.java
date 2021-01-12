@@ -19,10 +19,6 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-/**
- * Created by solo on 2018/1/10.
- */
-
 public class HomeFragmentPresenter implements HomeFragmentContract.Presenter {
 
     //大模块的图片数组

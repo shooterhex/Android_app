@@ -14,11 +14,6 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-/**
- * Created by solo on 2018/1/25.
- * mock 数据的工具类
- */
-
 public class MockUtils {
 
     private ShopService shopService;

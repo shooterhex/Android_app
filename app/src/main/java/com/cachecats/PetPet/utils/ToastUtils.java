@@ -4,11 +4,6 @@ import android.widget.Toast;
 
 import com.cachecats.PetPet.MyApplication;
 
-/**
- * Created by solo on 2018/1/10.
- * Toast工具
- */
-
 public class ToastUtils {
 
     private static Toast mToast;

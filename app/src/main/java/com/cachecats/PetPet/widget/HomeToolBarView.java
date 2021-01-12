@@ -5,10 +5,6 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.widget.LinearLayout;
 
-/**
- * Created by solo on 2018/2/28.
- */
-
 public class HomeToolBarView extends LinearLayout {
 
     public HomeToolBarView(Context context) {

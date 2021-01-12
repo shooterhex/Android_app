@@ -5,10 +5,6 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 
-/**
- * Created by solo on 2018/1/8.
- */
-
 public class BaseActivity extends AppCompatActivity {
 
     @Override

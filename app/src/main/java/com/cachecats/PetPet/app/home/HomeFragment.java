@@ -45,10 +45,6 @@ import javax.inject.Inject;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-/**
- * Created by solo on 2018/1/8.
- */
-
 public class HomeFragment extends BaseFragment implements HomeFragmentContract.View {
 
     @BindView(R.id.home_banner)

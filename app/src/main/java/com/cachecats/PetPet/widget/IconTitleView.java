@@ -14,11 +14,6 @@ import com.cachecats.PetPet.R;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-/**
- * Created by solo on 2018/1/9.
- * 上图片下标题的简单分模块布局自定义View
- */
-
 public class IconTitleView extends LinearLayout {
 
     @BindView(R.id.iv_icon_title)

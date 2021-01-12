@@ -17,11 +17,6 @@ import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.constant.RefreshState;
 import com.scwang.smartrefresh.layout.constant.SpinnerStyle;
 
-/**
- * Created by solo on 2018/1/31.
- * SmartRefreshLayout 的自定义下拉刷新 Header
- */
-
 public class CustomRefreshHeader extends LinearLayout implements RefreshHeader {
 
     private ImageView mImage;
@@ -60,21 +55,13 @@ public class CustomRefreshHeader extends LinearLayout implements RefreshHeader {
 
     }
 
-    /**
-     * 状态改变时调用。在这里切换第三阶段的动画卖萌小人
-     * @param refreshLayout
-     * @param oldState
-     * @param newState
-     */
     @Override
     public void onStateChanged(RefreshLayout refreshLayout, RefreshState oldState, RefreshState newState) {
         switch (newState) {
-            case PullDownToRefresh: //下拉刷新开始。正在下拉还没松手时调用
-                //每次重新下拉时，将图片资源重置为小人的大脑袋
+            case PullDownToRefresh:
                 mImage.setImageResource(R.drawable.commonui_pull_image);
                 break;
-            case Refreshing: //正在刷新。只调用一次
-                //状态切换为正在刷新状态时，设置图片资源为小人卖萌的动画并开始执行
+            case Refreshing:
                 mImage.setImageResource(R.drawable.anim_pull_refreshing);
                 refreshingAnim = (AnimationDrawable) mImage.getDrawable();
                 refreshingAnim.start();
@@ -85,27 +72,20 @@ public class CustomRefreshHeader extends LinearLayout implements RefreshHeader {
         }
     }
 
-    /**
-     * 下拉过程中不断调用此方法。第一阶段从小变大的小人头动画，和第二阶段翻跟头动画都在这里设置
-     */
     @Override
     public void onPullingDown(float percent, int offset, int headerHeight, int extendHeight) {
         Logger.d("percent: " + percent);
 
-        // 下拉的百分比小于100%时，不断调用 setScale 方法改变图片大小
         if (percent < 1) {
             mImage.setScaleX(percent);
             mImage.setScaleY(percent);
 
-            //是否执行过翻跟头动画的标记
             if (hasSetPullDownAnim) {
                 hasSetPullDownAnim = false;
             }
         }
 
-        //当下拉的高度达到Header高度100%时，开始加载正在下拉的初始动画，即翻跟头
         if (percent >= 1.0) {
-            //因为这个方法是不停调用的，防止重复
             if (!hasSetPullDownAnim) {
                 mImage.setImageResource(R.drawable.anim_pull_end);
                 pullDownAnim = (AnimationDrawable) mImage.getDrawable();

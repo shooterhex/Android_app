@@ -6,10 +6,6 @@ import java.lang.annotation.RetentionPolicy;
 
 import javax.inject.Scope;
 
-/**
- * Created by solo on 2018/1/10.
- */
-
 public interface Scopes {
 
     @Documented
