@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cachecats.PetPet.app.alarm.SecondActivity">
+
+
+    <EditText
+        android:id="@+id/hour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="50dp"
+        android:text="08"
+        android:inputType="number"
+        android:maxLength="2"
+        android:imeOptions="actionDone"
+        android:textSize="50sp" />
+
+    <EditText
+        android:id="@+id/minute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="125dp"
+        android:text="08"
+        android:inputType="number"
+        android:maxLength="2"
+        android:imeOptions="actionDone"
+        android:textSize="50sp" />
+
+    <EditText
+        android:id="@+id/second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="50dp"
+        android:layout_alignParentRight="true"
+        android:text="08"
+        android:inputType="number"
+        android:maxLength="2"
+        android:imeOptions="actionDone"
+        android:textSize="50sp" />
+
+    <Button
+        android:id="@+id/button"
+        android:text="ensure"
+        android:layout_width="fill_parent"
+        android:textColor="#ffffff"
+        android:background="#4B0082"
+        android:layout_height="76dp"
+        android:visibility="visible"
+        android:layout_marginTop="500dp"
+        tools:layout_editor_absoluteX="169dp"
+        tools:layout_editor_absoluteY="615dp" />
+
+
+
+</RelativeLayout>
