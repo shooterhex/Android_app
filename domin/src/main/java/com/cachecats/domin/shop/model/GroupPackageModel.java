@@ -2,11 +2,6 @@ package com.cachecats.domin.shop.model;
 
 import java.io.Serializable;
 
-/**
- * Created by solo on 2018/1/25.
- * 团购套餐表对应的model
- */
-
 public class GroupPackageModel implements Serializable {
 
     //团购套餐id

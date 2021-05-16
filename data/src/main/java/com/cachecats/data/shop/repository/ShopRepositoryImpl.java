@@ -1,6 +1,6 @@
 package com.cachecats.data.shop.repository;
 
-import com.cachecats.data.db.MeituanDB;
+import com.cachecats.data.db.PetPetDB;
 import com.cachecats.data.shop.entity.ShopEntity;
 import com.cachecats.data.shop.mapper.ShopMapper;
 import com.cachecats.domin.shop.model.ShopModel;
@@ -14,10 +14,6 @@ import com.raizlabs.android.dbflow.structure.database.transaction.ProcessModelTr
 import java.util.List;
 
 import javax.inject.Inject;
-
-/**
- * Created by solo on 2018/1/22.
- */
 
 public class ShopRepositoryImpl implements ShopRepository {
 
@@ -67,7 +63,7 @@ public class ShopRepositoryImpl implements ShopRepository {
                     }
                 }).addAll(entities).build();
 
-        FlowManager.getDatabase(MeituanDB.class)
+        FlowManager.getDatabase(PetPetDB.class)
                 .beginTransactionAsync(processModelTransaction)
                 .build()
                 .execute();

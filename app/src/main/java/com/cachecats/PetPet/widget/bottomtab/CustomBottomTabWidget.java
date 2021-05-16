@@ -21,14 +21,14 @@ public class CustomBottomTabWidget extends LinearLayout {
 
     @BindView(R.id.ll_menu_home_page)
     LinearLayout llMenuHome;
-    @BindView(R.id.ll_menu_nearby)
-    LinearLayout llMenuNearby;
-    @BindView(R.id.ll_menu_discover)
-    LinearLayout llMenuDiscover;
-    @BindView(R.id.ll_menu_order)
-    LinearLayout llMenuOrder;
-    @BindView(R.id.ll_menu_mine)
-    LinearLayout llMenuMine;
+    @BindView(R.id.ll_menu_music)
+    LinearLayout llMenuMusic;
+    @BindView(R.id.ll_menu_alarm)
+    LinearLayout llMenuAlarm;
+    @BindView(R.id.ll_menu_exper)
+    LinearLayout llMenuExper;
+    @BindView(R.id.ll_menu_report)
+    LinearLayout llMenuReport;
     @BindView(R.id.vp_tab_widget)
     ViewPager viewPager;
 
@@ -112,7 +112,7 @@ public class CustomBottomTabWidget extends LinearLayout {
     /**
      * 点击事件集合
      */
-    @OnClick({R.id.ll_menu_home_page, R.id.ll_menu_nearby, R.id.ll_menu_discover, R.id.ll_menu_order, R.id.ll_menu_mine})
+    @OnClick({R.id.ll_menu_home_page, R.id.ll_menu_music, R.id.ll_menu_alarm, R.id.ll_menu_exper, R.id.ll_menu_report})
     public void onViewClicked(View view) {
 
         switch (view.getId()) {
@@ -121,19 +121,19 @@ public class CustomBottomTabWidget extends LinearLayout {
                 //使ViewPager跟随tab点击事件滑动
                 viewPager.setCurrentItem(0);
                 break;
-            case R.id.ll_menu_nearby:
+            case R.id.ll_menu_music:
                 selectTab(MenuTab.NEARBY);
                 viewPager.setCurrentItem(1);
                 break;
-            case R.id.ll_menu_discover:
+            case R.id.ll_menu_alarm:
                 selectTab(MenuTab.DISCOVER);
                 viewPager.setCurrentItem(2);
                 break;
-            case R.id.ll_menu_order:
+            case R.id.ll_menu_exper:
                 selectTab(MenuTab.ORDER);
                 viewPager.setCurrentItem(3);
                 break;
-            case R.id.ll_menu_mine:
+            case R.id.ll_menu_report:
                 selectTab(MenuTab.MINE);
                 viewPager.setCurrentItem(4);
                 break;
@@ -154,16 +154,16 @@ public class CustomBottomTabWidget extends LinearLayout {
                 llMenuHome.setActivated(true);
                 break;
             case NEARBY:
-                llMenuNearby.setActivated(true);
+                llMenuMusic.setActivated(true);
                 break;
             case DISCOVER:
-                llMenuDiscover.setActivated(true);
+                llMenuAlarm.setActivated(true);
                 break;
             case ORDER:
-                llMenuOrder.setActivated(true);
+                llMenuExper.setActivated(true);
                 break;
             case MINE:
-                llMenuMine.setActivated(true);
+                llMenuReport.setActivated(true);
         }
 
     }
@@ -172,10 +172,10 @@ public class CustomBottomTabWidget extends LinearLayout {
     //让所有tab都取消选中
     private void unCheckedAll() {
         llMenuHome.setActivated(false);
-        llMenuNearby.setActivated(false);
-        llMenuDiscover.setActivated(false);
-        llMenuOrder.setActivated(false);
-        llMenuMine.setActivated(false);
+        llMenuMusic.setActivated(false);
+        llMenuAlarm.setActivated(false);
+        llMenuExper.setActivated(false);
+        llMenuReport.setActivated(false);
     }
 
     /**

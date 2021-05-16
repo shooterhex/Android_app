@@ -96,19 +96,14 @@ public class CustomRefreshHeader extends LinearLayout implements RefreshHeader {
         }
     }
 
-    /**
-     * 动画结束后调用
-     */
     @Override
     public int onFinish(RefreshLayout layout, boolean success) {
-        // 结束动画
         if (pullDownAnim != null && pullDownAnim.isRunning()) {
             pullDownAnim.stop();
         }
         if (refreshingAnim != null && refreshingAnim.isRunning()) {
             refreshingAnim.stop();
         }
-        //重置状态
         hasSetPullDownAnim = false;
         return 0;
     }

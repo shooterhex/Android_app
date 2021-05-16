@@ -10,10 +10,6 @@ import javax.inject.Inject;
 import io.reactivex.Completable;
 import io.reactivex.Single;
 
-/**
- * Created by solo on 2018/1/23.
- */
-
 public class ShopService {
 
     private ShopRepository repository;

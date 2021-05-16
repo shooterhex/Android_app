@@ -1,6 +1,6 @@
 package com.cachecats.data.shop.entity;
 
-import com.cachecats.data.db.MeituanDB;
+import com.cachecats.data.db.PetPetDB;
 import com.raizlabs.android.dbflow.annotation.Column;
 import com.raizlabs.android.dbflow.annotation.OneToMany;
 import com.raizlabs.android.dbflow.annotation.PrimaryKey;
@@ -10,23 +10,7 @@ import com.raizlabs.android.dbflow.structure.BaseModel;
 
 import java.util.List;
 
-/**
- * Created by solo on 2018/1/18.
- * 商店对应的数据库实体
- * <p>
- * 商家信息表 ：
- * id: shopId
- * 店名：shopName
- * logo图标: logo
- * 地址：address
- * 电话：tel
- * 服务分：serviceScore
- * 人均消费：perConsume
- * 简介：introduction
- * 推荐菜：recommendDishes
- */
-
-@Table(database = MeituanDB.class)
+@Table(database = PetPetDB.class)
 public class ShopEntity extends BaseModel {
 
     @PrimaryKey

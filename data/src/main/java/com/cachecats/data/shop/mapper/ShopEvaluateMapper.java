@@ -8,11 +8,6 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-/**
- * Created by solo on 2018/1/25.
- * entity model 转换类
- */
-
 public class ShopEvaluateMapper {
 
     @Inject

@@ -1,6 +1,6 @@
 package com.cachecats.data.shop.repository;
 
-import com.cachecats.data.db.MeituanDB;
+import com.cachecats.data.db.PetPetDB;
 import com.cachecats.data.shop.entity.GroupPackageEntity;
 import com.cachecats.data.shop.mapper.GroupPackageMapper;
 import com.cachecats.domin.shop.model.GroupPackageModel;
@@ -11,10 +11,6 @@ import com.raizlabs.android.dbflow.structure.database.transaction.FastStoreModel
 import java.util.List;
 
 import javax.inject.Inject;
-
-/**
- * Created by solo on 2018/1/25.
- */
 
 public class GroupPackageRepoImpl implements GroupPackageRepository {
 
@@ -38,7 +34,7 @@ public class GroupPackageRepoImpl implements GroupPackageRepository {
                 .saveBuilder(FlowManager.getModelAdapter(GroupPackageEntity.class))
                 .addAll(mapper.toEntities(models))
                 .build();
-        FlowManager.getDatabase(MeituanDB.class)
+        FlowManager.getDatabase(PetPetDB.class)
                 .beginTransactionAsync(transaction)
                 .build()
                 .execute();

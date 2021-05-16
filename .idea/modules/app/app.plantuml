@@ -1,0 +1,691 @@
+@startuml
+
+title __PROJECT_CODE.APP's Class Diagram__\n
+
+  namespace com.cachecats.PetPet {
+    class com.cachecats.PetPet.BuildConfig {
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    class com.cachecats.PetPet.MyApplication {
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace app {
+      class com.cachecats.PetPet.app.MainActivity {
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace app {
+      class com.cachecats.PetPet.app.MainActivity_ViewBinding {
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace app {
+      namespace discover {
+        class com.cachecats.PetPet.app.discover.DiscoverFragment {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace app {
+      namespace home {
+        class com.cachecats.PetPet.app.home.HomeFragment {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace app {
+      namespace home {
+        interface com.cachecats.PetPet.app.home.HomeFragmentContract {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace app {
+      namespace home {
+        class com.cachecats.PetPet.app.home.HomeFragmentPresenter {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace app {
+      namespace home {
+        class com.cachecats.PetPet.app.home.HomeFragmentPresenter_Factory {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace app {
+      namespace home {
+        class com.cachecats.PetPet.app.home.HomeFragment_MembersInjector {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace app {
+      namespace home {
+        class com.cachecats.PetPet.app.home.HomeFragment_ViewBinding {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace app {
+      namespace home {
+        namespace adapter {
+          class com.cachecats.PetPet.app.home.adapter.LittleModuleAdapter {
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace app {
+      namespace home {
+        namespace adapter {
+          class com.cachecats.PetPet.app.home.adapter.ShopListAdapter {
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace app {
+      namespace home {
+        namespace model {
+          class com.cachecats.PetPet.app.home.model.IconTitleModel {
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace app {
+      namespace mine {
+        class com.cachecats.PetPet.app.mine.Login {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace app {
+      namespace mine {
+        class com.cachecats.PetPet.app.mine.MineFragment {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace app {
+      namespace mine {
+        class com.cachecats.PetPet.app.mine.MineFragment_ViewBinding {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace app {
+      namespace mine {
+        class com.cachecats.PetPet.app.mine.Register {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace app {
+      namespace mine {
+        class com.cachecats.PetPet.app.mine.Resetpwd {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace app {
+      namespace mine {
+        class com.cachecats.PetPet.app.mine.User {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace app {
+      namespace mine {
+        class com.cachecats.PetPet.app.mine.UserData {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace app {
+      namespace mine {
+        class com.cachecats.PetPet.app.mine.UserDataManager {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace app {
+      namespace nearby {
+        class com.cachecats.PetPet.app.nearby.NearbyFragment {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace app {
+      namespace order {
+        class com.cachecats.PetPet.app.order.OrderFragment {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace base {
+      class com.cachecats.PetPet.base.BaseActivity {
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace base {
+      class com.cachecats.PetPet.base.BaseFragment {
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace base {
+      interface com.cachecats.PetPet.base.BasePresenter {
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace base {
+      interface com.cachecats.PetPet.base.BaseView {
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace di {
+      class com.cachecats.PetPet.di.DIHelper {
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace di {
+      namespace components {
+        interface com.cachecats.PetPet.di.components.ActivityComponent {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace di {
+      namespace components {
+        interface com.cachecats.PetPet.di.components.ApplicationComponent {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace di {
+      namespace components {
+        class com.cachecats.PetPet.di.components.DaggerActivityComponent {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace di {
+      namespace components {
+        class com.cachecats.PetPet.di.components.DaggerApplicationComponent {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace di {
+      namespace modules {
+        class com.cachecats.PetPet.di.modules.ActivityModule {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace di {
+      namespace modules {
+        class com.cachecats.PetPet.di.modules.ActivityModule_ProvideActivityFactory {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace di {
+      namespace modules {
+        class com.cachecats.PetPet.di.modules.ApplicationModule {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace di {
+      namespace modules {
+        class com.cachecats.PetPet.di.modules.ApplicationModule_ProvideApplicationFactory {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace di {
+      namespace modules {
+        class com.cachecats.PetPet.di.modules.ApplicationModule_ProvideContextFactory {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace di {
+      namespace modules {
+        class com.cachecats.PetPet.di.modules.ApplicationModule_ProvideGroupPackageRepositoryFactory {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace di {
+      namespace modules {
+        class com.cachecats.PetPet.di.modules.ApplicationModule_ProvidePresenterFactory {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace di {
+      namespace modules {
+        class com.cachecats.PetPet.di.modules.ApplicationModule_ProvideShopGroupInfoRepoFactory {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace di {
+      namespace modules {
+        class com.cachecats.PetPet.di.modules.ApplicationModule_ProvideShopRepositoryFactory {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace di {
+      namespace scopes {
+        interface com.cachecats.PetPet.di.scopes.Scopes {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace mock {
+      class com.cachecats.PetPet.mock.MockUtils {
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace mock {
+      class com.cachecats.PetPet.mock.MockUtils_Factory {
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace utils {
+      class com.cachecats.PetPet.utils.CommonUtils {
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace utils {
+      class com.cachecats.PetPet.utils.DensityUtils {
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace utils {
+      class com.cachecats.PetPet.utils.GlideImageLoader {
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace utils {
+      class com.cachecats.PetPet.utils.ToastUtils {
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace widget {
+      class com.cachecats.PetPet.widget.HomeAdsView {
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace widget {
+      class com.cachecats.PetPet.widget.HomeAdsView_ViewBinding {
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace widget {
+      class com.cachecats.PetPet.widget.HomeToolBarView {
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace widget {
+      class com.cachecats.PetPet.widget.IconTitleView {
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace widget {
+      class com.cachecats.PetPet.widget.IconTitleView_ViewBinding {
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace widget {
+      namespace bottomtab {
+        class com.cachecats.PetPet.widget.bottomtab.CustomBottomTabWidget {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace widget {
+      namespace bottomtab {
+        class com.cachecats.PetPet.widget.bottomtab.CustomBottomTabWidget_ViewBinding {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace widget {
+      namespace bottomtab {
+        class com.cachecats.PetPet.widget.bottomtab.TabPagerAdapter {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace widget {
+      namespace decoration {
+        class com.cachecats.PetPet.widget.decoration.DividerGridItemDecoration {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace widget {
+      namespace decoration {
+        class com.cachecats.PetPet.widget.decoration.DividerItemDecoration {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace widget {
+      namespace decoration {
+        class com.cachecats.PetPet.widget.decoration.HomeGridDecoration {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace widget {
+      namespace refresh {
+        class com.cachecats.PetPet.widget.refresh.CustomRefreshFooter {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.PetPet {
+    namespace widget {
+      namespace refresh {
+        class com.cachecats.PetPet.widget.refresh.CustomRefreshHeader {
+        }
+      }
+    }
+  }
+  
+
+  com.cachecats.PetPet.MyApplication -up-|> android.app.Application
+  com.cachecats.PetPet.MyApplication o-- com.cachecats.PetPet.di.components.ApplicationComponent : mApplicationComponent
+  com.cachecats.PetPet.app.MainActivity -up-|> com.cachecats.PetPet.base.BaseActivity
+  com.cachecats.PetPet.app.MainActivity o-- com.cachecats.PetPet.widget.bottomtab.CustomBottomTabWidget : tabWidget
+  com.cachecats.PetPet.app.MainActivity_ViewBinding .up.|> butterknife.Unbinder
+  com.cachecats.PetPet.app.MainActivity_ViewBinding o-- com.cachecats.PetPet.app.MainActivity : target
+  com.cachecats.PetPet.app.discover.DiscoverFragment -up-|> com.cachecats.PetPet.base.BaseFragment
+  com.cachecats.PetPet.app.home.HomeFragment .up.|> com.cachecats.PetPet.app.home.HomeFragmentContract.View
+  com.cachecats.PetPet.app.home.HomeFragment -up-|> com.cachecats.PetPet.base.BaseFragment
+  com.cachecats.PetPet.app.home.HomeFragment o-- com.cachecats.PetPet.widget.HomeAdsView : homeAdsView
+  com.cachecats.PetPet.app.home.HomeFragment o-- com.cachecats.PetPet.app.home.HomeFragmentContract.Presenter : presenter
+  com.cachecats.PetPet.app.home.HomeFragment o-- com.cachecats.PetPet.app.home.adapter.ShopListAdapter : mShopListAdapter
+  com.cachecats.PetPet.app.home.HomeFragmentPresenter .up.|> com.cachecats.PetPet.app.home.HomeFragmentContract.Presenter
+  com.cachecats.PetPet.app.home.HomeFragmentPresenter o-- com.solo.common.rxjava.CloseableRxServiceExecutor : executor
+  com.cachecats.PetPet.app.home.HomeFragmentPresenter o-- com.cachecats.domin.shop.service.GroupPackageService : groupPackageService
+  com.cachecats.PetPet.app.home.HomeFragmentPresenter o-- com.cachecats.PetPet.app.home.HomeFragmentContract.View : mFragment
+  com.cachecats.PetPet.app.home.HomeFragmentPresenter o-- com.cachecats.PetPet.mock.MockUtils : mockUtils
+  com.cachecats.PetPet.app.home.HomeFragmentPresenter o-- com.cachecats.domin.shop.service.ShopService : shopService
+  com.cachecats.PetPet.app.home.HomeFragmentPresenter_Factory .up.|> dagger.internal.Factory
+  com.cachecats.PetPet.app.home.HomeFragment_MembersInjector .up.|> dagger.MembersInjector
+  com.cachecats.PetPet.app.home.HomeFragment_ViewBinding .up.|> butterknife.Unbinder
+  com.cachecats.PetPet.app.home.HomeFragment_ViewBinding o-- com.cachecats.PetPet.app.home.HomeFragment : target
+  com.cachecats.PetPet.app.home.adapter.LittleModuleAdapter -up-|> com.chad.library.adapter.base.BaseQuickAdapter
+  com.cachecats.PetPet.app.home.adapter.ShopListAdapter -up-|> com.chad.library.adapter.base.BaseQuickAdapter
+  com.cachecats.PetPet.app.mine.Login -up-|> android.app.Activity
+  com.cachecats.PetPet.app.mine.Login o-- com.cachecats.PetPet.app.mine.UserDataManager : mUserDataManager
+  com.cachecats.PetPet.app.mine.MineFragment -up-|> com.cachecats.PetPet.base.BaseFragment
+  com.cachecats.PetPet.app.mine.MineFragment_ViewBinding .up.|> butterknife.Unbinder
+  com.cachecats.PetPet.app.mine.MineFragment_ViewBinding o-- com.cachecats.PetPet.app.mine.MineFragment : target
+  com.cachecats.PetPet.app.mine.Register -up-|> android.support.v7.app.AppCompatActivity
+  com.cachecats.PetPet.app.mine.Register o-- com.cachecats.PetPet.app.mine.UserDataManager : mUserDataManager
+  com.cachecats.PetPet.app.mine.Resetpwd -up-|> android.support.v7.app.AppCompatActivity
+  com.cachecats.PetPet.app.mine.Resetpwd o-- com.cachecats.PetPet.app.mine.UserDataManager : mUserDataManager
+  com.cachecats.PetPet.app.mine.User -up-|> android.support.v7.app.AppCompatActivity
+  com.cachecats.PetPet.app.mine.User o-- com.cachecats.PetPet.app.mine.UserDataManager : mUserDataManager
+  com.cachecats.PetPet.app.mine.UserDataManager o-- com.cachecats.PetPet.app.mine.UserDataManager.DataBaseManagementHelper : mDatabaseHelper
+  com.cachecats.PetPet.app.nearby.NearbyFragment -up-|> com.cachecats.PetPet.base.BaseFragment
+  com.cachecats.PetPet.app.order.OrderFragment -up-|> com.cachecats.PetPet.base.BaseFragment
+  com.cachecats.PetPet.base.BaseActivity -up-|> android.support.v7.app.AppCompatActivity
+  com.cachecats.PetPet.base.BaseFragment -up-|> android.support.v4.app.Fragment
+  com.cachecats.PetPet.di.components.DaggerActivityComponent .up.|> com.cachecats.PetPet.di.components.ActivityComponent
+  com.cachecats.PetPet.di.components.DaggerActivityComponent o-- com.cachecats.PetPet.di.components.ApplicationComponent : applicationComponent
+  com.cachecats.PetPet.di.components.DaggerApplicationComponent .up.|> com.cachecats.PetPet.di.components.ApplicationComponent
+  com.cachecats.PetPet.di.components.DaggerApplicationComponent o-- com.cachecats.PetPet.di.modules.ApplicationModule : applicationModule
+  com.cachecats.PetPet.di.components.DaggerApplicationComponent o-- com.cachecats.data.shop.repository.GroupPackageRepoImpl_Factory : groupPackageRepoImplProvider
+  com.cachecats.PetPet.di.components.DaggerApplicationComponent o-- com.cachecats.domin.shop.service.GroupPackageService_Factory : groupPackageServiceProvider
+  com.cachecats.PetPet.di.components.DaggerApplicationComponent o-- com.cachecats.PetPet.app.home.HomeFragmentPresenter_Factory : homeFragmentPresenterProvider
+  com.cachecats.PetPet.di.components.DaggerApplicationComponent o-- com.cachecats.PetPet.mock.MockUtils_Factory : mockUtilsProvider
+  com.cachecats.PetPet.di.components.DaggerApplicationComponent o-- com.cachecats.PetPet.di.modules.ApplicationModule_ProvideContextFactory : provideContextProvider
+  com.cachecats.PetPet.di.components.DaggerApplicationComponent o-- com.cachecats.data.shop.mapper.ShopGroupInfoMapper_Factory : shopGroupInfoMapperProvider
+  com.cachecats.PetPet.di.components.DaggerApplicationComponent o-- com.cachecats.data.shop.repository.ShopGroupInfoRepoImpl_Factory : shopGroupInfoRepoImplProvider
+  com.cachecats.PetPet.di.components.DaggerApplicationComponent o-- com.cachecats.domin.shop.service.ShopGroupInfoService_Factory : shopGroupInfoServiceProvider
+  com.cachecats.PetPet.di.components.DaggerApplicationComponent o-- com.cachecats.data.shop.mapper.ShopMapper_Factory : shopMapperProvider
+  com.cachecats.PetPet.di.components.DaggerApplicationComponent o-- com.cachecats.data.shop.repository.ShopRepositoryImpl_Factory : shopRepositoryImplProvider
+  com.cachecats.PetPet.di.components.DaggerApplicationComponent o-- com.cachecats.domin.shop.service.ShopService_Factory : shopServiceProvider
+  com.cachecats.PetPet.di.modules.ActivityModule_ProvideActivityFactory .up.|> dagger.internal.Factory
+  com.cachecats.PetPet.di.modules.ActivityModule_ProvideActivityFactory o-- com.cachecats.PetPet.di.modules.ActivityModule : module
+  com.cachecats.PetPet.di.modules.ApplicationModule_ProvideApplicationFactory .up.|> dagger.internal.Factory
+  com.cachecats.PetPet.di.modules.ApplicationModule_ProvideApplicationFactory o-- com.cachecats.PetPet.di.modules.ApplicationModule : module
+  com.cachecats.PetPet.di.modules.ApplicationModule_ProvideContextFactory .up.|> dagger.internal.Factory
+  com.cachecats.PetPet.di.modules.ApplicationModule_ProvideContextFactory o-- com.cachecats.PetPet.di.modules.ApplicationModule : module
+  com.cachecats.PetPet.di.modules.ApplicationModule_ProvideGroupPackageRepositoryFactory .up.|> dagger.internal.Factory
+  com.cachecats.PetPet.di.modules.ApplicationModule_ProvideGroupPackageRepositoryFactory o-- com.cachecats.PetPet.di.modules.ApplicationModule : module
+  com.cachecats.PetPet.di.modules.ApplicationModule_ProvidePresenterFactory .up.|> dagger.internal.Factory
+  com.cachecats.PetPet.di.modules.ApplicationModule_ProvidePresenterFactory o-- com.cachecats.PetPet.di.modules.ApplicationModule : module
+  com.cachecats.PetPet.di.modules.ApplicationModule_ProvideShopGroupInfoRepoFactory .up.|> dagger.internal.Factory
+  com.cachecats.PetPet.di.modules.ApplicationModule_ProvideShopGroupInfoRepoFactory o-- com.cachecats.PetPet.di.modules.ApplicationModule : module
+  com.cachecats.PetPet.di.modules.ApplicationModule_ProvideShopRepositoryFactory .up.|> dagger.internal.Factory
+  com.cachecats.PetPet.di.modules.ApplicationModule_ProvideShopRepositoryFactory o-- com.cachecats.PetPet.di.modules.ApplicationModule : module
+  com.cachecats.PetPet.mock.MockUtils o-- com.solo.common.rxjava.CloseableRxServiceExecutor : executor
+  com.cachecats.PetPet.mock.MockUtils o-- com.cachecats.domin.shop.service.GroupPackageService : groupPackageService
+  com.cachecats.PetPet.mock.MockUtils o-- com.cachecats.domin.shop.service.ShopGroupInfoService : shopGroupInfoService
+  com.cachecats.PetPet.mock.MockUtils o-- com.cachecats.domin.shop.service.ShopService : shopService
+  com.cachecats.PetPet.mock.MockUtils_Factory .up.|> dagger.internal.Factory
+  com.cachecats.PetPet.utils.GlideImageLoader -up-|> com.youth.banner.loader.ImageLoader
+  com.cachecats.PetPet.widget.HomeAdsView -up-|> android.widget.LinearLayout
+  com.cachecats.PetPet.widget.HomeAdsView o-- com.cachecats.PetPet.widget.HomeAdsView.OnAdsClickListener : onAdsClickListener
+  com.cachecats.PetPet.widget.HomeAdsView_ViewBinding .up.|> butterknife.Unbinder
+  com.cachecats.PetPet.widget.HomeAdsView_ViewBinding o-- com.cachecats.PetPet.widget.HomeAdsView : target
+  com.cachecats.PetPet.widget.HomeToolBarView -up-|> android.widget.LinearLayout
+  com.cachecats.PetPet.widget.IconTitleView -up-|> android.widget.LinearLayout
+  com.cachecats.PetPet.widget.IconTitleView_ViewBinding .up.|> butterknife.Unbinder
+  com.cachecats.PetPet.widget.IconTitleView_ViewBinding o-- com.cachecats.PetPet.widget.IconTitleView : target
+  com.cachecats.PetPet.widget.bottomtab.CustomBottomTabWidget -up-|> android.widget.LinearLayout
+  com.cachecats.PetPet.widget.bottomtab.CustomBottomTabWidget o-- com.cachecats.PetPet.widget.bottomtab.TabPagerAdapter : mAdapter
+  com.cachecats.PetPet.widget.bottomtab.CustomBottomTabWidget_ViewBinding .up.|> butterknife.Unbinder
+  com.cachecats.PetPet.widget.bottomtab.CustomBottomTabWidget_ViewBinding o-- com.cachecats.PetPet.widget.bottomtab.CustomBottomTabWidget : target
+  com.cachecats.PetPet.widget.bottomtab.TabPagerAdapter -up-|> android.support.v4.app.FragmentPagerAdapter
+  com.cachecats.PetPet.widget.decoration.DividerGridItemDecoration -up-|> android.support.v7.widget.RecyclerView.ItemDecoration
+  com.cachecats.PetPet.widget.decoration.DividerItemDecoration -up-|> android.support.v7.widget.RecyclerView.ItemDecoration
+  com.cachecats.PetPet.widget.decoration.HomeGridDecoration -up-|> android.support.v7.widget.RecyclerView.ItemDecoration
+  com.cachecats.PetPet.widget.refresh.CustomRefreshFooter .up.|> com.scwang.smartrefresh.layout.api.RefreshFooter
+  com.cachecats.PetPet.widget.refresh.CustomRefreshFooter -up-|> android.widget.LinearLayout
+  com.cachecats.PetPet.widget.refresh.CustomRefreshHeader .up.|> com.scwang.smartrefresh.layout.api.RefreshHeader
+  com.cachecats.PetPet.widget.refresh.CustomRefreshHeader -up-|> android.widget.LinearLayout
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

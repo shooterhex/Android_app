@@ -7,10 +7,6 @@ import io.reactivex.functions.Action;
 import io.reactivex.functions.BiConsumer;
 import io.reactivex.functions.Consumer;
 
-/**
- * Created by solo on 2018/1/24.
- */
-
 public interface RxExecuter {
 
     <T> void execute(Single<T> single, Consumer<T> onSuccess);

@@ -1,4 +1,4 @@
-package com.cachecats.PetPet.app.order;
+package com.cachecats.PetPet.app.music;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import com.cachecats.PetPet.R;
 import com.cachecats.PetPet.base.BaseFragment;
 
-public class OrderFragment extends BaseFragment {
+public class MusicFragment extends BaseFragment {
 
     @Nullable
     @Override

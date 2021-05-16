@@ -10,11 +10,6 @@ import javax.inject.Inject;
 import io.reactivex.Completable;
 import io.reactivex.Single;
 
-/**
- * Created by solo on 2018/1/25.
- * 操作团购套餐的服务类
- */
-
 public class GroupPackageService {
 
     private GroupPackageRepository repository;

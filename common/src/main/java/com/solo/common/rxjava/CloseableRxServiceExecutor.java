@@ -16,11 +16,6 @@ import io.reactivex.functions.BiConsumer;
 import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
 
-/**
- * Created by solo on 2018/1/24.
- * 封装的 RxJava 工具类
- */
-
 public class CloseableRxServiceExecutor implements RxExecuter {
 
     private CompositeDisposable mCompositeDisposable = new CompositeDisposable();

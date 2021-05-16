@@ -4,11 +4,11 @@ import android.os.Bundle;
 
 import com.cachecats.PetPet.MyApplication;
 import com.cachecats.PetPet.R;
-import com.cachecats.PetPet.app.discover.DiscoverFragment;
+import com.cachecats.PetPet.app.alarm.AlarmFragment;
 import com.cachecats.PetPet.app.home.HomeFragment;
-import com.cachecats.PetPet.app.mine.MineFragment;
-import com.cachecats.PetPet.app.nearby.NearbyFragment;
-import com.cachecats.PetPet.app.order.OrderFragment;
+import com.cachecats.PetPet.app.report.MineFragment;
+import com.cachecats.PetPet.app.music.MusicFragment;
+import com.cachecats.PetPet.app.exper.ExperFragment;
 import com.cachecats.PetPet.base.BaseActivity;
 import com.cachecats.PetPet.base.BaseFragment;
 import com.cachecats.PetPet.di.components.DaggerActivityComponent;
@@ -46,9 +46,9 @@ public class MainActivity extends BaseActivity {
         //构造Fragment的集合
         fragmentList = new ArrayList<>();
         fragmentList.add(new HomeFragment());
-        fragmentList.add(new NearbyFragment());
-        fragmentList.add(new DiscoverFragment());
-        fragmentList.add(new OrderFragment());
+        fragmentList.add(new MusicFragment());
+        fragmentList.add(new AlarmFragment());
+        fragmentList.add(new ExperFragment());
         fragmentList.add(new MineFragment());
         //初始化CustomBottomTabWidget
         tabWidget.init(getSupportFragmentManager(), fragmentList);

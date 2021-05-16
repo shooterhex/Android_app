@@ -1,5 +1,4 @@
-package com.cachecats.PetPet.app.discover;
-
+package com.cachecats.PetPet.app.exper;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -9,14 +8,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import android.app.Activity;
-
-
-
 import com.cachecats.PetPet.R;
 import com.cachecats.PetPet.base.BaseFragment;
 
-public class DiscoverFragment extends BaseFragment {
+public class ExperFragment extends BaseFragment {
 
     @Nullable
     @Override
@@ -24,9 +19,7 @@ public class DiscoverFragment extends BaseFragment {
         View view = inflater.inflate(R.layout.fragment_discover, null);
         ImageView image = (ImageView) view.findViewById(R.id.dis_sample);             //使用ImageView显示logo
         image.setImageResource(R.drawable.dis_sample);
-
         return view;
 
     }
-
 }

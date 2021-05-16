@@ -10,10 +10,6 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-/**
- * Created by solo on 2018/1/25.
- */
-
 public class ShopGroupInfoMapper implements Serializable {
 
     private GroupPackageMapper groupPackageMapper;

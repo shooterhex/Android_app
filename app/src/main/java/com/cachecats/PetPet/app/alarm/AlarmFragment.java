@@ -1,4 +1,5 @@
-package com.cachecats.PetPet.app.nearby;
+package com.cachecats.PetPet.app.alarm;
+
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -8,10 +9,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+
 import com.cachecats.PetPet.R;
 import com.cachecats.PetPet.base.BaseFragment;
 
-public class NearbyFragment extends BaseFragment {
+public class AlarmFragment extends BaseFragment {
 
     @Nullable
     @Override
@@ -19,7 +21,9 @@ public class NearbyFragment extends BaseFragment {
         View view = inflater.inflate(R.layout.fragment_discover, null);
         ImageView image = (ImageView) view.findViewById(R.id.dis_sample);             //使用ImageView显示logo
         image.setImageResource(R.drawable.dis_sample);
+
         return view;
 
     }
+
 }

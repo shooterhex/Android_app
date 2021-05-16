@@ -59,38 +59,6 @@ public class HomeAdsView extends LinearLayout {
         }
     }
 
-    /**
-     * 设置广告的资源id，从左到右从上到下依次排列
-     * 加载本地图片
-     *
-     * @param list
-     */
-    public void setAdsResource(List<Integer> list) {
-        if (list == null || list.size() != 4) {
-            return;
-        }
-        Glide.with(this).load(list.get(0)).into(ads1);
-        Glide.with(this).load(list.get(1)).into(ads2);
-        Glide.with(this).load(list.get(2)).into(ads3);
-        Glide.with(this).load(list.get(3)).into(ads4);
-    }
-
-    /**
-     * 设置广告的资源id，从左到右从上到下依次排列
-     * 加载网络图片
-     *
-     * @param list
-     */
-    public void setAdsUrl(List<String> list) {
-        if (list == null || list.size() != 4) {
-            return;
-        }
-        Glide.with(this).load(list.get(0)).into(ads1);
-        Glide.with(this).load(list.get(1)).into(ads2);
-        Glide.with(this).load(list.get(2)).into(ads3);
-        Glide.with(this).load(list.get(3)).into(ads4);
-    }
-
     private OnAdsClickListener onAdsClickListener;
 
     public interface OnAdsClickListener {

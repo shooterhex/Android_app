@@ -2,11 +2,6 @@ package com.cachecats.domin.shop.model;
 
 import java.io.Serializable;
 
-/**
- * Created by solo on 2018/1/25.
- * 商铺评价表对应的model
- */
-
 public class ShopEvaluateModel implements Serializable{
 
     //评价id

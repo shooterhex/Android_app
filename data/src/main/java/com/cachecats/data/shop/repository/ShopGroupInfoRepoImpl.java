@@ -1,6 +1,6 @@
 package com.cachecats.data.shop.repository;
 
-import com.cachecats.data.db.MeituanDB;
+import com.cachecats.data.db.PetPetDB;
 import com.cachecats.data.shop.entity.ShopGroupInfoEntity;
 import com.cachecats.data.shop.mapper.ShopGroupInfoMapper;
 import com.cachecats.domin.shop.model.ShopGroupInfoModel;
@@ -11,10 +11,6 @@ import com.raizlabs.android.dbflow.structure.database.transaction.FastStoreModel
 import java.util.List;
 
 import javax.inject.Inject;
-
-/**
- * Created by solo on 2018/1/25.
- */
 
 public class ShopGroupInfoRepoImpl implements ShopGroupInfoRepo {
 
@@ -37,7 +33,7 @@ public class ShopGroupInfoRepoImpl implements ShopGroupInfoRepo {
                 .saveBuilder(FlowManager.getModelAdapter(ShopGroupInfoEntity.class))
                 .addAll(mapper.toEntities(models))
                 .build();
-        FlowManager.getDatabase(MeituanDB.class)
+        FlowManager.getDatabase(PetPetDB.class)
                 .beginTransactionAsync(transaction)
                 .build().execute();
     }

@@ -9,11 +9,6 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-/**
- * Created by solo on 2018/1/22.
- * 将 entity 转换为 model 的转换类
- */
-
 public class ShopMapper {
 
     private ShopGroupInfoMapper shopGroupInfoMapper;

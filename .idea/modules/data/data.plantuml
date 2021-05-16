@@ -1,0 +1,242 @@
+@startuml
+
+title __PROJECT_CODE.DATA's Class Diagram__\n
+
+  namespace com.cachecats.data {
+    class com.cachecats.data.BuildConfig {
+    }
+  }
+  
+
+  namespace com.cachecats.data {
+    namespace db {
+      class com.cachecats.data.db.PetPetDB {
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.data {
+    namespace shop.entity {
+      class com.cachecats.data.shop.entity.GroupPackageEntity {
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.data {
+    namespace shop.entity {
+      class com.cachecats.data.shop.entity.GroupPackageEntity_Table {
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.data {
+    namespace shop.entity {
+      class com.cachecats.data.shop.entity.ShopEntity {
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.data {
+    namespace shop.entity {
+      class com.cachecats.data.shop.entity.ShopEntity_Table {
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.data {
+    namespace shop.entity {
+      class com.cachecats.data.shop.entity.ShopEvaluateEntity {
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.data {
+    namespace shop.entity {
+      class com.cachecats.data.shop.entity.ShopEvaluateEntity_Table {
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.data {
+    namespace shop.entity {
+      class com.cachecats.data.shop.entity.ShopGroupInfoEntity {
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.data {
+    namespace shop.entity {
+      class com.cachecats.data.shop.entity.ShopGroupInfoEntity_Table {
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.data {
+    namespace shop.mapper {
+      class com.cachecats.data.shop.mapper.GroupPackageMapper {
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.data {
+    namespace shop.mapper {
+      class com.cachecats.data.shop.mapper.GroupPackageMapper_Factory {
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.data {
+    namespace shop.mapper {
+      class com.cachecats.data.shop.mapper.ShopEvaluateMapper {
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.data {
+    namespace shop.mapper {
+      class com.cachecats.data.shop.mapper.ShopEvaluateMapper_Factory {
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.data {
+    namespace shop.mapper {
+      class com.cachecats.data.shop.mapper.ShopGroupInfoMapper {
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.data {
+    namespace shop.mapper {
+      class com.cachecats.data.shop.mapper.ShopGroupInfoMapper_Factory {
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.data {
+    namespace shop.mapper {
+      class com.cachecats.data.shop.mapper.ShopMapper {
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.data {
+    namespace shop.mapper {
+      class com.cachecats.data.shop.mapper.ShopMapper_Factory {
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.data {
+    namespace shop.repository {
+      class com.cachecats.data.shop.repository.GroupPackageRepoImpl {
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.data {
+    namespace shop.repository {
+      class com.cachecats.data.shop.repository.GroupPackageRepoImpl_Factory {
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.data {
+    namespace shop.repository {
+      class com.cachecats.data.shop.repository.ShopGroupInfoRepoImpl {
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.data {
+    namespace shop.repository {
+      class com.cachecats.data.shop.repository.ShopGroupInfoRepoImpl_Factory {
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.data {
+    namespace shop.repository {
+      class com.cachecats.data.shop.repository.ShopRepositoryImpl {
+      }
+    }
+  }
+  
+
+  namespace com.cachecats.data {
+    namespace shop.repository {
+      class com.cachecats.data.shop.repository.ShopRepositoryImpl_Factory {
+      }
+    }
+  }
+  
+
+  namespace com.raizlabs.android.dbflow.config {
+    class com.raizlabs.android.dbflow.config.GeneratedDatabaseHolder {
+    }
+  }
+  
+
+  namespace com.raizlabs.android.dbflow.config {
+    class com.raizlabs.android.dbflow.config.PetPetDBPetPetDB_Database {
+    }
+  }
+  
+
+  com.cachecats.data.shop.entity.GroupPackageEntity -up-|> com.raizlabs.android.dbflow.structure.BaseModel
+  com.cachecats.data.shop.entity.GroupPackageEntity_Table -up-|> com.raizlabs.android.dbflow.structure.ModelAdapter
+  com.cachecats.data.shop.entity.ShopEntity -up-|> com.raizlabs.android.dbflow.structure.BaseModel
+  com.cachecats.data.shop.entity.ShopEntity_Table -up-|> com.raizlabs.android.dbflow.structure.ModelAdapter
+  com.cachecats.data.shop.entity.ShopEvaluateEntity -up-|> com.raizlabs.android.dbflow.structure.BaseModel
+  com.cachecats.data.shop.entity.ShopEvaluateEntity_Table -up-|> com.raizlabs.android.dbflow.structure.ModelAdapter
+  com.cachecats.data.shop.entity.ShopGroupInfoEntity -up-|> com.raizlabs.android.dbflow.structure.BaseModel
+  com.cachecats.data.shop.entity.ShopGroupInfoEntity_Table -up-|> com.raizlabs.android.dbflow.structure.ModelAdapter
+  com.cachecats.data.shop.mapper.GroupPackageMapper_Factory .up.|> dagger.internal.Factory
+  com.cachecats.data.shop.mapper.ShopEvaluateMapper_Factory .up.|> dagger.internal.Factory
+  com.cachecats.data.shop.mapper.ShopGroupInfoMapper .up.|> java.io.Serializable
+  com.cachecats.data.shop.mapper.ShopGroupInfoMapper o-- com.cachecats.data.shop.mapper.GroupPackageMapper : groupPackageMapper
+  com.cachecats.data.shop.mapper.ShopGroupInfoMapper_Factory .up.|> dagger.internal.Factory
+  com.cachecats.data.shop.mapper.ShopMapper o-- com.cachecats.data.shop.mapper.ShopGroupInfoMapper : shopGroupInfoMapper
+  com.cachecats.data.shop.mapper.ShopMapper_Factory .up.|> dagger.internal.Factory
+  com.cachecats.data.shop.repository.GroupPackageRepoImpl .up.|> com.cachecats.domin.shop.repository.GroupPackageRepository
+  com.cachecats.data.shop.repository.GroupPackageRepoImpl o-- com.cachecats.data.shop.mapper.GroupPackageMapper : mapper
+  com.cachecats.data.shop.repository.GroupPackageRepoImpl_Factory .up.|> dagger.internal.Factory
+  com.cachecats.data.shop.repository.ShopGroupInfoRepoImpl .up.|> com.cachecats.domin.shop.repository.ShopGroupInfoRepo
+  com.cachecats.data.shop.repository.ShopGroupInfoRepoImpl o-- com.cachecats.data.shop.mapper.ShopGroupInfoMapper : mapper
+  com.cachecats.data.shop.repository.ShopGroupInfoRepoImpl_Factory .up.|> dagger.internal.Factory
+  com.cachecats.data.shop.repository.ShopRepositoryImpl .up.|> com.cachecats.domin.shop.repository.ShopRepository
+  com.cachecats.data.shop.repository.ShopRepositoryImpl o-- com.cachecats.data.shop.mapper.ShopMapper : mapper
+  com.cachecats.data.shop.repository.ShopRepositoryImpl_Factory .up.|> dagger.internal.Factory
+  com.raizlabs.android.dbflow.config.GeneratedDatabaseHolder -up-|> com.raizlabs.android.dbflow.config.DatabaseHolder
+  com.raizlabs.android.dbflow.config.PetPetDBPetPetDB_Database -up-|> com.raizlabs.android.dbflow.config.DatabaseDefinition
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml
