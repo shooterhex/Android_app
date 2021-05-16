@@ -17,8 +17,8 @@ public class MusicFragment extends BaseFragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_discover, null);
-        ImageView image = (ImageView) view.findViewById(R.id.dis_sample);             //使用ImageView显示logo
-        image.setImageResource(R.drawable.dis_sample);
+//        ImageView image = (ImageView) view.findViewById(R.id.dis_sample);             //使用ImageView显示logo
+//        image.setImageResource(R.drawable.dis_sample);
         return view;
 
     }

@@ -70,8 +70,11 @@ public class Login extends Activity {                 //登录界面活动
         mCancleButton.setOnClickListener(mListener);
         mChangepwdText.setOnClickListener(mListener);
 
+//        ImageView image = (ImageView) findViewById(R.id.logo);             //使用ImageView显示logo
+//        image.setImageResource(R.drawable.logo);
+
         ImageView image = (ImageView) findViewById(R.id.logo);             //使用ImageView显示logo
-        image.setImageResource(R.drawable.logo);
+        image.setImageResource(R.drawable.ic_vector_exper_pressed);
 
         if (mUserDataManager == null) {
             mUserDataManager = new UserDataManager(this);

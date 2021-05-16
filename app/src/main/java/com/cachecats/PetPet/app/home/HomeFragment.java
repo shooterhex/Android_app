@@ -60,8 +60,8 @@ public class HomeFragment extends BaseFragment implements HomeFragmentContract.V
     @BindView(R.id.recyclerview_little_module)
     RecyclerView littleModuleRecyclerView;
     //4块广告封装成的自定义View
-    @BindView(R.id.home_ads_view)
-    HomeAdsView homeAdsView;
+//    @BindView(R.id.home_ads_view)
+//    HomeAdsView homeAdsView;
     //团购商店列表
     @BindView(R.id.recycler_view_shops)
     RecyclerView rvShopList;
@@ -101,7 +101,7 @@ public class HomeFragment extends BaseFragment implements HomeFragmentContract.V
     private void init() {
         initBanner();
         initLittleModuleRecyclerView();
-        initAds();
+//        initAds();
         initShopList();
         initSmartRefreshLayout();
     }
@@ -187,29 +187,29 @@ public class HomeFragment extends BaseFragment implements HomeFragmentContract.V
         mShopListAdapter.setNewData(shopModels);
     }
 
-    private void initAds() {
-        homeAdsView.setOnAdsClickListener(new HomeAdsView.OnAdsClickListener() {
-            @Override
-            public void onAds1Click() {
-                ToastUtils.show("Ads1");
-            }
-
-            @Override
-            public void onAds2Click() {
-                ToastUtils.show("Ads2");
-            }
-
-            @Override
-            public void onAds3Click() {
-                ToastUtils.show("Ads3");
-            }
-
-            @Override
-            public void onAds4Click() {
-                ToastUtils.show("Ads4");
-            }
-        });
-    }
+//    private void initAds() {
+//        homeAdsView.setOnAdsClickListener(new HomeAdsView.OnAdsClickListener() {
+//            @Override
+//            public void onAds1Click() {
+//                ToastUtils.show("Ads1");
+//            }
+//
+//            @Override
+//            public void onAds2Click() {
+//                ToastUtils.show("Ads2");
+//            }
+//
+//            @Override
+//            public void onAds3Click() {
+//                ToastUtils.show("Ads3");
+//            }
+//
+//            @Override
+//            public void onAds4Click() {
+//                ToastUtils.show("Ads4");
+//            }
+//        });
+//    }
 
     /**
      * 初始化小模块的RecyclerView
