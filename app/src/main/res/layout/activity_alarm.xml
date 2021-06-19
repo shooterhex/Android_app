@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.cachecats.PetPet.app.alarm.AlarmActivity">
+    tools:context="com.sleepapp.SleepTracker.app.alarm.AlarmActivity">
 
     <TextView
         android:id="@+id/time"

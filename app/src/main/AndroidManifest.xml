@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.cachecats.PetPet">
+    package="com.sleepapp.SleepTracker">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -12,11 +12,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-        android:name="com.cachecats.PetPet.MyApplication"
+        android:name="com.sleepapp.SleepTracker.MyApplication"
         >
 
-        <activity android:name="com.cachecats.PetPet.base.BaseActivity" />
-        <activity android:name="com.cachecats.PetPet.app.MainActivity">
+        <activity android:name="com.sleepapp.SleepTracker.base.BaseActivity" />
+        <activity android:name="com.sleepapp.SleepTracker.app.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,31 +25,31 @@
         </activity>
 
 
-        <activity android:name="com.cachecats.PetPet.app.report.Login"
+        <activity android:name="com.sleepapp.SleepTracker.app.report.Login"
             android:label="用户登录">
         </activity>
 
-        <activity android:name="com.cachecats.PetPet.app.report.User"
+        <activity android:name="com.sleepapp.SleepTracker.app.report.User"
             android:label="个人中心">
         </activity>
 
-        <activity android:name="com.cachecats.PetPet.app.report.Register"
+        <activity android:name="com.sleepapp.SleepTracker.app.report.Register"
             android:label="用户注册">
         </activity>
 
-        <activity android:name="com.cachecats.PetPet.app.report.Resetpwd"
+        <activity android:name="com.sleepapp.SleepTracker.app.report.Resetpwd"
             android:label="密码修改">
         </activity>
 
-        <activity android:name="com.cachecats.PetPet.app.alarm.AlarmActivity">
+        <activity android:name="com.sleepapp.SleepTracker.app.alarm.AlarmActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.cachecats.PetPet.app.alarm.SecondActivity"></activity>
-        <activity android:name="com.cachecats.PetPet.app.alarm.ThirdActivity"></activity>
+        <activity android:name="com.sleepapp.SleepTracker.app.alarm.SecondActivity"></activity>
+        <activity android:name="com.sleepapp.SleepTracker.app.alarm.ThirdActivity"></activity>
 
     </application>
 

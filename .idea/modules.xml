@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android_app.iml" filepath="$PROJECT_DIR$/.idea/modules/android_app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/android_app.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/android_app.app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/android_app.common.iml" filepath="$PROJECT_DIR$/.idea/modules/common/android_app.common.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/data/android_app.data.iml" filepath="$PROJECT_DIR$/.idea/modules/data/android_app.data.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/domin/android_app.domin.iml" filepath="$PROJECT_DIR$/.idea/modules/domin/android_app.domin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/project_code.iml" filepath="$PROJECT_DIR$/.idea/modules/project_code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/project_code.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/project_code.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/project_code.common.iml" filepath="$PROJECT_DIR$/.idea/modules/common/project_code.common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/data/project_code.data.iml" filepath="$PROJECT_DIR$/.idea/modules/data/project_code.data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/domin/project_code.domin.iml" filepath="$PROJECT_DIR$/.idea/modules/domin/project_code.domin.iml" />
     </modules>
   </component>
 </project>
