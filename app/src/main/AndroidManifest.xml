@@ -50,7 +50,7 @@
         </activity>
         <activity android:name="com.cachecats.PetPet.app.alarm.SecondActivity"></activity>
         <activity android:name="com.cachecats.PetPet.app.alarm.ThirdActivity"></activity>
-
+        <activity android:name="com.cachecats.PetPet.app.home.Pop" android:theme="@style/AppTheme.CustomTheme"></activity>
     </application>
 
 

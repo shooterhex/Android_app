@@ -71,7 +71,7 @@ public class HomeFragmentPresenter implements HomeFragmentContract.Presenter {
     @Override
     public void onStart() {
 
-        initBigModule();
+          initBigModule();
 //        mockUtils.mockShopDataToDB();
 //        mockUtils.clearShop();
 //        mockUtils.mockGroupPackagesToDB();
@@ -79,6 +79,7 @@ public class HomeFragmentPresenter implements HomeFragmentContract.Presenter {
 //        mockUtils.mockGroupInfoData();
         getFirstPageShops();
     }
+
 
     @Override
     public void onDestroy() {

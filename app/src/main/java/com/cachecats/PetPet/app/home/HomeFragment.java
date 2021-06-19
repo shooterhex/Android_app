@@ -1,19 +1,27 @@
 package com.cachecats.PetPet.app.home;
 
+import android.animation.ArgbEvaluator;
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TableLayout;
+import android.widget.TableRow;
+import android.widget.TextView;
 
-import com.cachecats.domin.shop.model.ShopGroupInfoModel;
+import com.cachecats.PetPet.app.MainActivity;
+import com.cachecats.PetPet.app.alarm.SecondActivity;
 import com.cachecats.domin.shop.model.ShopModel;
 import com.cachecats.PetPet.MyApplication;
 import com.cachecats.PetPet.R;
@@ -26,11 +34,20 @@ import com.cachecats.PetPet.utils.GlideImageLoader;
 import com.cachecats.PetPet.utils.ToastUtils;
 import com.cachecats.PetPet.widget.refresh.CustomRefreshFooter;
 import com.cachecats.PetPet.widget.refresh.CustomRefreshHeader;
-import com.cachecats.PetPet.widget.HomeAdsView;
 import com.cachecats.PetPet.widget.IconTitleView;
 import com.cachecats.PetPet.widget.decoration.DividerItemDecoration;
 import com.cachecats.PetPet.widget.decoration.HomeGridDecoration;
 import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.jjoe64.graphview.DefaultLabelFormatter;
+import com.jjoe64.graphview.GraphView;
+import com.jjoe64.graphview.GridLabelRenderer;
+import com.jjoe64.graphview.LegendRenderer;
+import com.jjoe64.graphview.ValueDependentColor;
+import com.jjoe64.graphview.series.BarGraphSeries;
+import com.jjoe64.graphview.series.DataPoint;
+import com.jjoe64.graphview.series.DataPointInterface;
+import com.jjoe64.graphview.series.OnDataPointTapListener;
+import com.jjoe64.graphview.series.Series;
 import com.orhanobut.logger.Logger;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshFooter;
@@ -40,9 +57,14 @@ import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 import com.youth.banner.Transformer;
 
-import java.util.ArrayList;
+import java.io.IOException;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+import java.util.Calendar;
 import java.util.Collections;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import javax.inject.Inject;
 
@@ -51,8 +73,21 @@ import butterknife.ButterKnife;
 
 public class HomeFragment extends BaseFragment implements HomeFragmentContract.View {
 
+
     @BindView(R.id.home_banner)
     Banner banner;
+    //數據的LinearLayout布局
+    @BindView(R.id.data_plot_linearLayout)
+    LinearLayout graph_layout;
+    //==========================================================================
+    //數據的image布局
+    @BindView(R.id.graph)
+    GraphView graph;
+    BarGraphSeries<DataPoint> series;
+
+    //percentage
+
+    //==========================================================================
     //大模块的LinearLayout布局
     @BindView(R.id.ll_big_module_fragment_home)
     LinearLayout llBigModule;
@@ -74,7 +109,7 @@ public class HomeFragment extends BaseFragment implements HomeFragmentContract.V
 
     private ShopListAdapter mShopListAdapter;
     private List<ShopModel> mShopModels = Collections.emptyList();
-
+    boolean flag = true;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -100,11 +135,13 @@ public class HomeFragment extends BaseFragment implements HomeFragmentContract.V
 
     private void init() {
         initBanner();
+        initGraph();
         initLittleModuleRecyclerView();
 //        initAds();
         initShopList();
         initSmartRefreshLayout();
     }
+
 
 
     //初始化下拉刷新控件
@@ -250,7 +287,13 @@ public class HomeFragment extends BaseFragment implements HomeFragmentContract.V
     @Override
     public void onResume() {
         super.onResume();
-        presenter.onStart();
+        if(flag)
+        {
+            presenter.onStart();
+            flag=false;
+        }
+
+
     }
 
     @Override
@@ -271,6 +314,170 @@ public class HomeFragment extends BaseFragment implements HomeFragmentContract.V
                 .setIndicatorGravity(BannerConfig.CENTER)
                 .start();
     }
+
+    public void initGraph(){
+        double y;
+        DataPoint []dp = new DataPoint[30];
+        for (int x=0;x<30;x++){
+            y = x;
+            dp[x] = new DataPoint(x,y);
+        }
+        series = new BarGraphSeries<>(dp);
+
+        graph.addSeries(series);
+
+        //title
+        double maxY_double = series.getHighestValueY();
+        double maxX_double = series.getHighestValueX();
+        double minY_double = series.getLowestValueY();
+        double minX_double = series.getLowestValueX();
+
+
+        graph.setTitle(String.format("Your Sleep mark: %.2f", maxY_double));
+        graph.setTitleTextSize(90);
+        graph.setTitleColor(Color.GREEN);
+
+        series.setSpacing(20);
+        //series.setDrawValuesOnTop(true);
+        series.setValuesOnTopColor(Color.BLACK);
+
+
+        // data graph line
+        graph.getGridLabelRenderer().setVerticalLabelsVisible(false);
+        //graph.getGridLabelRenderer().setHorizontalLabelsVisible(false);
+        graph.getGridLabelRenderer().setGridStyle( GridLabelRenderer.GridStyle.NONE );
+
+        graph.getViewport().setYAxisBoundsManual(true);
+        graph.getViewport().setMinY(0);
+        graph.getViewport().setMaxY(maxY_double);
+
+        graph.getViewport().setXAxisBoundsManual(true);
+        graph.getViewport().setMinX(minX_double);
+        graph.getViewport().setMaxX(maxX_double);
+
+        // enable scaling and scrolling
+        graph.getViewport().setScalable(true);
+        //graph.getViewport().setScalableY(true);
+
+        //set label
+        graph.getGridLabelRenderer().setLabelFormatter(new DefaultLabelFormatter(){
+            @Override
+            public String formatLabel(double value,boolean isValueX){
+                if(isValueX){
+                    int minute = ((int)(value))/60;
+                    int second = ((int)(value))%60;
+                    return Integer.toString(minute) + ":" + Integer.toString(second);
+                }
+                return super.formatLabel(value,isValueX);
+            }
+        });
+        graph.getGridLabelRenderer().setTextSize(25);
+
+        //set legend
+        /*
+        series.setTitle("Sleep quality");
+        graph.getLegendRenderer().setVisible(true);
+        graph.getLegendRenderer().setTextSize(40);
+        graph.getLegendRenderer().setTextColor(Color.BLACK);
+        graph.getLegendRenderer().setAlign(LegendRenderer.LegendAlign.TOP);
+        */
+
+        series.setValueDependentColor(new ValueDependentColor<DataPoint>() {
+            @Override
+            public int get(DataPoint data) {
+                return getCurrentColor((float)(data.getY()/series.getHighestValueY()),Color.RED,Color.GREEN);
+                /*
+                if(data.getY()<=10)
+                    return Color.RED;
+
+                else if(data.getY()>10 && data.getY()<=20)
+                    return Color.YELLOW;
+                else if(data.getY()>20 && data.getY()<=30)
+                    return Color.GREEN;
+                else if(data.getY()>30 && data.getY()<=40)
+                    return Color.GREEN;
+                else
+                    return Color.GREEN;
+                 */
+
+            }
+        });
+
+
+
+
+/*
+        series.setOnDataPointTapListener(new OnDataPointTapListener() {
+            @Override
+            public void onTap(Series series, DataPointInterface dataPoint) {
+
+
+                graph.setTitle("REM");
+
+                Timer timer = new Timer();
+                timer.schedule(new TimerTask() {
+                    @Override
+                    public void run() {
+                        graph.setTitle(String.format("Your Sleep mark: %.2f", series.getHighestValueY()));
+                    }
+                },1000);
+            }
+        });
+*/
+
+
+        graph.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity().getApplicationContext(),Pop.class));
+            }
+        });
+
+        //percentage text
+/*
+        graph.setOnTouchListener(new View.OnTouchListener(){
+            @Override
+            public boolean onTouch(View v, MotionEvent e){
+                int x = (int) e.getX();
+                int y = (int) e.getY();
+
+                return false;
+            }
+        });
+*/
+
+    }
+
+    private int getCurrentColor(float fraction, int startColor, int endColor) {
+        int redCurrent;
+        int blueCurrent;
+        int greenCurrent;
+        int alphaCurrent;
+
+        int redStart = Color.red(startColor);
+        int blueStart = Color.blue(startColor);
+        int greenStart = Color.green(startColor);
+        int alphaStart = Color.alpha(startColor);
+
+        int redEnd = Color.red(endColor);
+        int blueEnd = Color.blue(endColor);
+        int greenEnd = Color.green(endColor);
+        int alphaEnd = Color.alpha(endColor);
+
+        int redDifference = redEnd - redStart;
+        int blueDifference = blueEnd - blueStart;
+        int greenDifference = greenEnd - greenStart;
+        int alphaDifference = alphaEnd - alphaStart;
+
+        redCurrent = (int) (redStart + fraction * redDifference);
+        blueCurrent = (int) (blueStart + fraction * blueDifference);
+        greenCurrent = (int) (greenStart + fraction * greenDifference);
+        alphaCurrent = (int) (alphaStart + fraction * alphaDifference);
+
+        return Color.argb(alphaCurrent, redCurrent, greenCurrent, blueCurrent);
+    }
+
+
 
     /**
      * 往根布局上添加View
