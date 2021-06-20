@@ -443,7 +443,7 @@ public class HomeFragment extends BaseFragment implements HomeFragmentContract.V
         series.setValueDependentColor(new ValueDependentColor<DataPoint>() {
             @Override
             public int get(DataPoint data) {
-                return getCurrentColor((float)(data.getY()/series.getHighestValueY()),Color.RED,Color.GREEN);
+                return getCurrentColor((float)(data.getY()/series.getHighestValueY()));
             }
         });
 
@@ -507,7 +507,20 @@ public class HomeFragment extends BaseFragment implements HomeFragmentContract.V
         return RANDOM.nextDouble()*30d;
     }
 
-    private int getCurrentColor(float fraction, int startColor, int endColor) {
+    private int getCurrentColor(float f) {
+        int startColor;
+        int endColor;
+        float fraction;
+        if(f<=0.5){
+            startColor = Color.RED;
+            endColor = Color.YELLOW;
+            fraction = f*2;
+        }
+        else {
+            startColor = Color.YELLOW;
+            endColor = Color.GREEN;
+            fraction = (f-0.5f)*2;
+        }
         int redCurrent;
         int blueCurrent;
         int greenCurrent;
