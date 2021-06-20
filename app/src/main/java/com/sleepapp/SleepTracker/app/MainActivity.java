@@ -6,7 +6,7 @@ import com.sleepapp.SleepTracker.MyApplication;
 import com.sleepapp.SleepTracker.R;
 import com.sleepapp.SleepTracker.app.alarm.AlarmFragment;
 import com.sleepapp.SleepTracker.app.home.HomeFragment;
-import com.sleepapp.SleepTracker.app.report.MineFragment;
+import com.sleepapp.SleepTracker.app.account.MineFragment;
 import com.sleepapp.SleepTracker.app.music.MusicFragment;
 import com.sleepapp.SleepTracker.app.exper.ExperFragment;
 import com.sleepapp.SleepTracker.base.BaseActivity;

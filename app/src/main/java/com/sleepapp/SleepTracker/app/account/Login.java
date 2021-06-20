@@ -1,4 +1,4 @@
-package com.sleepapp.SleepTracker.app.report;
+package com.sleepapp.SleepTracker.app.account;
 
 import android.app.Activity;
 import android.content.Intent;

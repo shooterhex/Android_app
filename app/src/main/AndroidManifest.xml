@@ -25,19 +25,19 @@
         </activity>
 
 
-        <activity android:name="com.sleepapp.SleepTracker.app.report.Login"
+        <activity android:name="com.sleepapp.SleepTracker.app.account.Login"
             android:label="用户登录">
         </activity>
 
-        <activity android:name="com.sleepapp.SleepTracker.app.report.User"
+        <activity android:name="com.sleepapp.SleepTracker.app.account.User"
             android:label="个人中心">
         </activity>
 
-        <activity android:name="com.sleepapp.SleepTracker.app.report.Register"
+        <activity android:name="com.sleepapp.SleepTracker.app.account.Register"
             android:label="用户注册">
         </activity>
 
-        <activity android:name="com.sleepapp.SleepTracker.app.report.Resetpwd"
+        <activity android:name="com.sleepapp.SleepTracker.app.account.Resetpwd"
             android:label="密码修改">
         </activity>
 

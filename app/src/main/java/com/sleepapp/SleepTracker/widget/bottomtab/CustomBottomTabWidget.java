@@ -28,8 +28,8 @@ public class CustomBottomTabWidget extends LinearLayout {
     LinearLayout llMenuAlarm;
     @BindView(R.id.ll_menu_exper)
     LinearLayout llMenuExper;
-    @BindView(R.id.ll_menu_report)
-    LinearLayout llMenuReport;
+    @BindView(R.id.ll_menu_account)
+    LinearLayout llMenuAccount;
     @BindView(R.id.vp_tab_widget)
     ViewPager viewPager;
 
@@ -95,7 +95,7 @@ public class CustomBottomTabWidget extends LinearLayout {
                         selectTab(MenuTab.EXPER);
                         break;
                     case 4:
-                        selectTab(MenuTab.REPORT);
+                        selectTab(MenuTab.ACCOUNT);
                         break;
                     default:
                         selectTab(MenuTab.HOME);
@@ -113,7 +113,7 @@ public class CustomBottomTabWidget extends LinearLayout {
     /**
      * 点击事件集合
      */
-    @OnClick({R.id.ll_menu_home_page, R.id.ll_menu_music, R.id.ll_menu_alarm, R.id.ll_menu_exper, R.id.ll_menu_report})
+    @OnClick({R.id.ll_menu_home_page, R.id.ll_menu_music, R.id.ll_menu_alarm, R.id.ll_menu_exper, R.id.ll_menu_account})
     public void onViewClicked(View view) {
 
         switch (view.getId()) {
@@ -134,8 +134,8 @@ public class CustomBottomTabWidget extends LinearLayout {
                 selectTab(MenuTab.EXPER);
                 viewPager.setCurrentItem(3);
                 break;
-            case R.id.ll_menu_report:
-                selectTab(MenuTab.REPORT);
+            case R.id.ll_menu_account:
+                selectTab(MenuTab.ACCOUNT);
                 viewPager.setCurrentItem(4);
                 break;
         }
@@ -163,8 +163,8 @@ public class CustomBottomTabWidget extends LinearLayout {
             case EXPER:
                 llMenuExper.setActivated(true);
                 break;
-            case REPORT:
-                llMenuReport.setActivated(true);
+            case ACCOUNT:
+                llMenuAccount.setActivated(true);
         }
 
     }
@@ -176,7 +176,7 @@ public class CustomBottomTabWidget extends LinearLayout {
         llMenuMusic.setActivated(false);
         llMenuAlarm.setActivated(false);
         llMenuExper.setActivated(false);
-        llMenuReport.setActivated(false);
+        llMenuAccount.setActivated(false);
     }
 
     /**
@@ -187,6 +187,6 @@ public class CustomBottomTabWidget extends LinearLayout {
         MUSIC,
         HOME,
         EXPER,
-        REPORT
+        ACCOUNT
     }
 }

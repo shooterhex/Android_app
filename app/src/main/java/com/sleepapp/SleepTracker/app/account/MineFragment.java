@@ -1,4 +1,4 @@
-package com.sleepapp.SleepTracker.app.report;
+package com.sleepapp.SleepTracker.app.account;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -25,7 +25,7 @@ public class MineFragment extends BaseFragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_mine, null);
+        View view = inflater.inflate(R.layout.fragment_account, null);
         //View view = inflater.inflate(R.layout.activity_login, null);
 
         Intent intent = new Intent(getActivity().getApplicationContext(),Login.class);
