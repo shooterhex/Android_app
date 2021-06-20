@@ -8,8 +8,8 @@
     tools:context="com.sleepapp.SleepTracker.app.MainActivity">
 
     <com.sleepapp.SleepTracker.widget.bottomtab.CustomBottomTabWidget
-        android:id="@+id/tabWidget"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+            android:id="@+id/tabWidget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
 </LinearLayout>

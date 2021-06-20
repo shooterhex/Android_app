@@ -41,15 +41,10 @@
             android:label="密码修改">
         </activity>
 
-        <activity android:name="com.sleepapp.SleepTracker.app.alarm.AlarmActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name="com.sleepapp.SleepTracker.app.alarm.AlarmActivity"></activity>
         <activity android:name="com.sleepapp.SleepTracker.app.alarm.SecondActivity"></activity>
         <activity android:name="com.sleepapp.SleepTracker.app.alarm.ThirdActivity"></activity>
+        <activity android:name=".app.exper.ExperActivity"></activity>
 
     </application>
 

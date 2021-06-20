@@ -12,8 +12,8 @@ import android.widget.Toast;
 
 //import androidx.appcompat.app.AlertDialog;
 //import androidx.appcompat.app.AppCompatActivity;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AlertDialog;
 
 import com.sleepapp.SleepTracker.R;
 

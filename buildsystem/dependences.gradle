@@ -2,7 +2,7 @@ ext {
 
     //Android
     androidBuildToolsVersion = "30.0.2"
-    androidMinSdkVersion = 18
+    androidMinSdkVersion = 21
     androidTargetSdkVersion = 30
     androidCompileSdkVersion = 30
 
@@ -12,7 +12,7 @@ ext {
     rxandroidVersion = "2.0.1"
     daggerVersion = "2.14.1"
     glideVersion = "4.5.0"
-    butterKnifeVersion = "8.8.1"
+    butterKnifeVersion = "10.2.3"
     bannerVersion = "1.4.10"
     loggerVersion = "2.1.1"
     baseRecyclerViewAdapterHelperVersion = "2.9.30"
@@ -21,7 +21,7 @@ ext {
     smartRefreshLayoutVersion = "1.0.4"
 
     app = [
-            recyclerView                 : "com.android.support:recyclerview-v7:${recyclerViewVersion}",
+            recyclerView                 : 'androidx.recyclerview:recyclerview:1.0.0',
             rxjava                       : "io.reactivex.rxjava2:rxjava:${rxjava2Version}",
             rxandroid                    : "io.reactivex.rxjava2:rxandroid:${rxandroidVersion}",
             dagger                       : "com.google.dagger:dagger:${daggerVersion}",

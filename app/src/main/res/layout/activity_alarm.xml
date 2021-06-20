@@ -16,13 +16,13 @@
         android:textSize="50sp" />
 
     <ImageView
-        android:id="@+id/addTime"
-        android:layout_width="wrap_content"
-        android:layout_height="76dp"
-        android:src="@drawable/add2"
-        android:visibility="visible"
-        android:layout_marginTop="500dp"
-        tools:layout_editor_absoluteX="169dp"
-        tools:layout_editor_absoluteY="615dp" />
+            android:id="@+id/addTime"
+            android:layout_width="wrap_content"
+            android:layout_height="76dp"
+            android:src="@drawable/add2"
+            android:visibility="visible"
+            android:layout_marginTop="500dp"
+            tools:layout_editor_absoluteX="169dp"
+            tools:layout_editor_absoluteY="615dp"/>
 
 </RelativeLayout>

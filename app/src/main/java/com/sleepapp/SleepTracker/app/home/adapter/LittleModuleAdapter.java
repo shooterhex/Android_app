@@ -1,6 +1,6 @@
 package com.sleepapp.SleepTracker.app.home.adapter;
 
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import com.sleepapp.SleepTracker.R;
 import com.sleepapp.SleepTracker.app.home.model.IconTitleModel;

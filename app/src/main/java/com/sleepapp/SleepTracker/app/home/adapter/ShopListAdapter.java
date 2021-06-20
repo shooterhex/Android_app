@@ -1,7 +1,7 @@
 package com.sleepapp.SleepTracker.app.home.adapter;
 
 import android.content.Context;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;

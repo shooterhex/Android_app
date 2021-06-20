@@ -53,7 +53,7 @@
                         android:background="@color/dividerColorF0" />
 
                     <!--两行小模块布局 RecyclerView实现的GridView -->
-                    <android.support.v7.widget.RecyclerView
+                    <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/recyclerview_little_module"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -68,7 +68,7 @@
                     -->
 
                     <!--团购列表-->
-                    <android.support.v7.widget.RecyclerView
+                    <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/recycler_view_shops"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
