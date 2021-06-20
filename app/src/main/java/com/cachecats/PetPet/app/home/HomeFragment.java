@@ -5,12 +5,14 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.os.Debug;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -43,9 +45,11 @@ import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.GridLabelRenderer;
 import com.jjoe64.graphview.LegendRenderer;
 import com.jjoe64.graphview.ValueDependentColor;
+import com.jjoe64.graphview.Viewport;
 import com.jjoe64.graphview.series.BarGraphSeries;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.DataPointInterface;
+import com.jjoe64.graphview.series.LineGraphSeries;
 import com.jjoe64.graphview.series.OnDataPointTapListener;
 import com.jjoe64.graphview.series.Series;
 import com.orhanobut.logger.Logger;
@@ -60,9 +64,12 @@ import com.youth.banner.Transformer;
 import java.io.IOException;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
+import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -85,7 +92,10 @@ public class HomeFragment extends BaseFragment implements HomeFragmentContract.V
     GraphView graph;
     BarGraphSeries<DataPoint> series;
 
-    //percentage
+    //數據的image布局
+    @BindView(R.id.graph_realtime)
+    GraphView graph_realtime;
+    LineGraphSeries<DataPoint> series_realtime;
 
     //==========================================================================
     //大模块的LinearLayout布局
@@ -110,6 +120,10 @@ public class HomeFragment extends BaseFragment implements HomeFragmentContract.V
     private ShopListAdapter mShopListAdapter;
     private List<ShopModel> mShopModels = Collections.emptyList();
     boolean flag = true;
+    private int lastX = 0;
+    private static final Random RANDOM = new Random();
+    SimpleDateFormat sdf = new SimpleDateFormat("mm:ss");
+    Timer timer;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -136,6 +150,7 @@ public class HomeFragment extends BaseFragment implements HomeFragmentContract.V
     private void init() {
         initBanner();
         initGraph();
+        initGraph_real();
         initLittleModuleRecyclerView();
 //        initAds();
         initShopList();
@@ -293,7 +308,50 @@ public class HomeFragment extends BaseFragment implements HomeFragmentContract.V
             flag=false;
         }
 
+        timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                addEntry();
+                Log.d("real time","called");
+            }
+        },0,1000);
+        /*
+        new Thread(new Runnable() {
 
+            @Override
+            public void run() {
+                // we add 100 new entries
+                for (int i = 0; i < 100; i++) {
+                    runOnUiThread(new Runnable() {
+
+                        @Override
+                        public void run() {
+                            addEntry();
+                        }
+                    });
+
+                    // sleep to slow down the add of entries
+                    try {
+                        Thread.sleep(600);
+                    } catch (InterruptedException e) {
+                        // manage error ...
+                    }
+                }
+            }
+        }).start();
+        */
+
+    }
+
+
+
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        //增加banner的体验
+        //timer.cancel();
     }
 
     @Override
@@ -366,7 +424,7 @@ public class HomeFragment extends BaseFragment implements HomeFragmentContract.V
                 if(isValueX){
                     int minute = ((int)(value))/60;
                     int second = ((int)(value))%60;
-                    return Integer.toString(minute) + ":" + Integer.toString(second);
+                    return String.format("%02d:%02d",minute,second);
                 }
                 return super.formatLabel(value,isValueX);
             }
@@ -386,44 +444,13 @@ public class HomeFragment extends BaseFragment implements HomeFragmentContract.V
             @Override
             public int get(DataPoint data) {
                 return getCurrentColor((float)(data.getY()/series.getHighestValueY()),Color.RED,Color.GREEN);
-                /*
-                if(data.getY()<=10)
-                    return Color.RED;
-
-                else if(data.getY()>10 && data.getY()<=20)
-                    return Color.YELLOW;
-                else if(data.getY()>20 && data.getY()<=30)
-                    return Color.GREEN;
-                else if(data.getY()>30 && data.getY()<=40)
-                    return Color.GREEN;
-                else
-                    return Color.GREEN;
-                 */
-
             }
         });
 
 
 
 
-/*
-        series.setOnDataPointTapListener(new OnDataPointTapListener() {
-            @Override
-            public void onTap(Series series, DataPointInterface dataPoint) {
 
-
-                graph.setTitle("REM");
-
-                Timer timer = new Timer();
-                timer.schedule(new TimerTask() {
-                    @Override
-                    public void run() {
-                        graph.setTitle(String.format("Your Sleep mark: %.2f", series.getHighestValueY()));
-                    }
-                },1000);
-            }
-        });
-*/
 
 
         graph.setOnClickListener(new View.OnClickListener() {
@@ -433,19 +460,49 @@ public class HomeFragment extends BaseFragment implements HomeFragmentContract.V
             }
         });
 
-        //percentage text
-/*
-        graph.setOnTouchListener(new View.OnTouchListener(){
-            @Override
-            public boolean onTouch(View v, MotionEvent e){
-                int x = (int) e.getX();
-                int y = (int) e.getY();
 
-                return false;
+    }
+
+    private void initGraph_real(){
+
+        series_realtime = new LineGraphSeries<DataPoint>();
+        graph_realtime.addSeries(series_realtime);
+
+        Viewport viewport = graph_realtime.getViewport();
+        viewport.setYAxisBoundsManual(true);
+        viewport.setMinY(0);
+        viewport.setMaxY(30);
+        viewport.setXAxisBoundsManual(true);
+        viewport.setScrollable(true);
+
+        //set label
+        graph_realtime.getGridLabelRenderer().setLabelFormatter(new DefaultLabelFormatter(){
+            @Override
+            public String formatLabel(double value,boolean isValueX){
+                if(isValueX){
+                    /*
+                    int minute = ((int)(value))/60;
+                    int second = ((int)(value))%60;
+                    return String.format("%02d:%02d",minute,second);
+                    */
+                    long valueMillis = (new Double(value)).longValue();
+                     return sdf.format(valueMillis);
+                }
+                return super.formatLabel(value,isValueX);
             }
         });
-*/
 
+    }
+
+
+
+    private void addEntry(){
+        long millis = System.currentTimeMillis();
+        series_realtime.appendData(new DataPoint((new Long(millis)).doubleValue(), getDataRealTime()),true, 10 );
+    }
+
+    public double getDataRealTime(){
+        return RANDOM.nextDouble()*30d;
     }
 
     private int getCurrentColor(float fraction, int startColor, int endColor) {
