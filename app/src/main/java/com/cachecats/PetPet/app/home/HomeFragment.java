@@ -473,6 +473,8 @@ public class HomeFragment extends BaseFragment implements HomeFragmentContract.V
         viewport.setMinY(0);
         viewport.setMaxY(30);
         viewport.setXAxisBoundsManual(true);
+        viewport.setMaxX(15000);
+        viewport.setMinX(2000);
         viewport.setScrollable(true);
 
         //set label
@@ -486,7 +488,7 @@ public class HomeFragment extends BaseFragment implements HomeFragmentContract.V
                     return String.format("%02d:%02d",minute,second);
                     */
                     long valueMillis = (new Double(value)).longValue();
-                     return sdf.format(valueMillis);
+                    return sdf.format(valueMillis);
                 }
                 return super.formatLabel(value,isValueX);
             }
@@ -498,7 +500,7 @@ public class HomeFragment extends BaseFragment implements HomeFragmentContract.V
 
     private void addEntry(){
         long millis = System.currentTimeMillis();
-        series_realtime.appendData(new DataPoint((new Long(millis)).doubleValue(), getDataRealTime()),true, 10 );
+        series_realtime.appendData(new DataPoint((new Long(millis)).doubleValue(), getDataRealTime()),true, 100 );
     }
 
     public double getDataRealTime(){
