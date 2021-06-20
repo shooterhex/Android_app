@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="用户您好，欢迎回来！"
+        android:id="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="6dp"
+        android:textSize="16dp" />
+
+
+    <ListView
+        android:id="@+id/PETView"
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="45dp"
+        android:text="bbb！"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="50dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="功能"
+        android:id="@+id/addpet"
+        android:layout_below="@+id/PETView"
+        android:layout_marginTop="36dp"
+        android:onClick="addPet"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:background="#4B0082"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="退出"
+    android:id="@+id/returnback"
+    android:layout_below="@+id/addpet"
+    android:layout_marginTop="16dp"
+    android:onClick="back_to_login"
+    android:textColor="#ffffff"
+    android:textSize="20dp"
+    android:background="#4B0082"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true" />
+
+
+
+</RelativeLayout>

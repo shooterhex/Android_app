@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_tab_widget"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!--下面的tab标签布局-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="3dp"
+        android:paddingTop="3dp"
+        >
+
+        <LinearLayout
+                android:id="@+id/ll_menu_alarm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+            <ImageView
+                    android:id="@+id/iv_menu_alarm"
+                    style="@style/menuIconStyle"
+                    android:src="@drawable/selector_icon_menu_alarm" />
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/ll_menu_music"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+            <ImageView
+                    android:id="@+id/iv_menu_music"
+                    style="@style/menuIconStyle"
+                    android:src="@drawable/selector_icon_menu_music" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_menu_home_page"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_menu_home"
+                style="@style/menuIconStyle"
+                android:src="@drawable/selector_icon_menu_home" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_menu_exper"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_menu_exper"
+                style="@style/menuIconStyle"
+                android:src="@drawable/selector_icon_menu_exper" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_menu_report"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_menu_report"
+                style="@style/menuIconStyle"
+                android:src="@drawable/selector_icon_menu_report" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
