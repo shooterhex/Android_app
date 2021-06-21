@@ -45,6 +45,30 @@
         android:imeOptions="actionDone"
         android:textSize="50sp" />
 
+    <EditText
+        android:id="@+id/earlierWake"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="171dp"
+        android:imeOptions="actionDone"
+        android:inputType="number"
+        android:maxLength="2"
+        android:text="30"
+        android:textSize="50sp" />
+
+    <TextView
+        android:id="@+id/earlierWake_minute"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="226dp"
+        android:text="minute"
+        android:textSize="50sp" />
+
     <Button
         android:id="@+id/button"
         android:text="ensure"

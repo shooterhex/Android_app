@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android_work.iml" filepath="$PROJECT_DIR$/.idea/modules/android_work.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/android_work.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/android_work.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/android_work.common.iml" filepath="$PROJECT_DIR$/.idea/modules/common/android_work.common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/data/android_work.data.iml" filepath="$PROJECT_DIR$/.idea/modules/data/android_work.data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/domin/android_work.domin.iml" filepath="$PROJECT_DIR$/.idea/modules/domin/android_work.domin.iml" />
+    </modules>
+  </component>
+</project>

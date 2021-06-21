@@ -1,6 +1,8 @@
 package com.sleepapp.SleepTracker.app;
 
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 
 import com.sleepapp.SleepTracker.MyApplication;
 import com.sleepapp.SleepTracker.R;
@@ -32,6 +34,7 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+
 
         DaggerActivityComponent.builder()
                 .applicationComponent(MyApplication.getApplicationComponent())

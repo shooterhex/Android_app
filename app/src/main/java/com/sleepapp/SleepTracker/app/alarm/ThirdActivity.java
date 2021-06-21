@@ -23,11 +23,12 @@ import java.util.Calendar;
 
 public class ThirdActivity extends AppCompatActivity {
 
-    public int h,m,s;
+    public int h,m,s,det;
     public int ah,am,as;
     public int ctime;
     public int time;
     public String stime;
+    public String sdet;
 
     public EditText hour,min,sec;
     public CountDownTimer timer;
@@ -40,10 +41,15 @@ public class ThirdActivity extends AppCompatActivity {
         m = Calendar.getInstance().get(Calendar.MINUTE);
         s = Calendar.getInstance().get(Calendar.SECOND);
         ctime = h * 3600 + m * 60 + s;
-
+        NumberFormat f = new DecimalFormat("00");
 
         Bundle bundle = getIntent().getExtras();
         stime = bundle.getString("time");
+        sdet = bundle.getString("det");
+        det = Integer.parseInt(sdet);
+        TextView tv = findViewById(R.id.det);
+        tv.setText(f.format(det));
+
 
         time = Integer.parseInt(stime);
         if(time > ctime) time = time - ctime;
@@ -55,7 +61,7 @@ public class ThirdActivity extends AppCompatActivity {
         am = (time % 3600) / 60;
         as = time % 60;
 
-        NumberFormat f = new DecimalFormat("00");
+
         TextView currentTime = findViewById(R.id.time);
         currentTime.setText(f.format(ah)+":"+f.format(am)+":"+f.format(as));
         startTime();
