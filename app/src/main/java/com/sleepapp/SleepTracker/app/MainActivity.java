@@ -1,8 +1,8 @@
 package com.sleepapp.SleepTracker.app;
 
 import android.os.Bundle;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 
 import com.sleepapp.SleepTracker.MyApplication;
 import com.sleepapp.SleepTracker.R;
