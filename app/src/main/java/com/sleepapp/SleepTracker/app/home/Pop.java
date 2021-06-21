@@ -1,4 +1,4 @@
-package com.cachecats.PetPet.app.home;
+package com.sleepapp.SleepTracker.app.home;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -8,7 +8,7 @@ import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.cachecats.PetPet.R;
+import com.sleepapp.SleepTracker.R;
 import com.jjoe64.graphview.DefaultLabelFormatter;
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.GridLabelRenderer;
