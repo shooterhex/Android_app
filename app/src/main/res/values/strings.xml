@@ -1,5 +1,7 @@
+
+
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_name">PetPet</string>
+    <string name="app_name">SleepTracker</string>
     <string name="hint_operator_name">你好</string>
     <string name="hello">Hello World, Date!</string>
     <string name="strInputAccHint">输入帐号</string>
