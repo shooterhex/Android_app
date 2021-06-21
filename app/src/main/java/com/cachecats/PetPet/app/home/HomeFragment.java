@@ -414,7 +414,7 @@ public class HomeFragment extends BaseFragment implements HomeFragmentContract.V
         graph.getViewport().setMaxX(maxX_double);
 
         // enable scaling and scrolling
-        graph.getViewport().setScalable(true);
+        //graph.getViewport().setScalable(true);
         //graph.getViewport().setScalableY(true);
 
         //set label
