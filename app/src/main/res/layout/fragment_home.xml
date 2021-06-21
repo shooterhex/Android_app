@@ -81,7 +81,7 @@
 
                     <!--四个广告封装的自定义View-->
                     <!--
-                    <com.cachecats.PetPet.widget.HomeAdsView
+                    <com.sleepapp.SleepTracker.widget.HomeAdsView
                         android:id="@+id/home_ads_view"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
