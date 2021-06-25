@@ -36,7 +36,7 @@
             android:layout_height="86dp"
             android:padding="10dp"
             android:scaleType="centerInside"
-            android:background="#"
+            android:background="#FFFFFF"
             android:src="@drawable/music_last" />
         <ImageButton
             android:id="@+id/play"
@@ -44,7 +44,7 @@
             android:layout_height="86dp"
             android:padding="10dp"
             android:scaleType="centerInside"
-            android:background="#"
+            android:background="#FFFFFF"
             android:src="@drawable/music_play" />
         <ImageButton
             android:id="@+id/next"
@@ -52,7 +52,7 @@
             android:layout_height="86dp"
             android:padding="10dp"
             android:scaleType="centerInside"
-            android:background="#"
+            android:background="#FFFFFF"
             android:src="@drawable/music_next" />
     </LinearLayout>
 </RelativeLayout>

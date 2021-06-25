@@ -6,6 +6,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text=""
+        android:textSize="50sp"
+        android:layout_marginTop="140dp"
+
+        tools:layout_editor_absoluteX="205dp"
+        tools:layout_editor_absoluteY="85dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/addTime"
+        android:layout_width="wrap_content"
+        android:layout_height="76dp"
+        android:src="@drawable/add2"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="509dp"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/dis_sample"

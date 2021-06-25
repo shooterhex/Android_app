@@ -45,7 +45,6 @@
         <activity android:name="com.sleepapp.SleepTracker.app.alarm.AlarmActivity"></activity>
         <activity android:name="com.sleepapp.SleepTracker.app.alarm.SecondActivity"></activity>
         <activity android:name="com.sleepapp.SleepTracker.app.alarm.ThirdActivity"></activity>
-        <activity android:name=".app.exper.ExperActivity"></activity>
         <activity android:name="com.sleepapp.SleepTracker.app.home.Pop" android:theme="@style/AppTheme.CustomTheme"></activity>
     </application>
 

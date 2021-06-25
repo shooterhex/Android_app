@@ -13,5 +13,16 @@
             android:layout_height="match_parent" />
 
     <include layout="@layout/player_sheet" />
-
+    <ImageView
+        android:id="@+id/dis_sample"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:background="#ffffff"
+        tools:ignore="MissingConstraints" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

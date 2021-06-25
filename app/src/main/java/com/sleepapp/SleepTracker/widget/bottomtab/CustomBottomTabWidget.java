@@ -72,6 +72,7 @@ public class CustomBottomTabWidget extends LinearLayout {
     private void initViewPager() {
         mAdapter = new TabPagerAdapter(mFragmentManager, mFragmentList);
         viewPager.setAdapter(mAdapter);
+        viewPager.setOffscreenPageLimit(1);
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
