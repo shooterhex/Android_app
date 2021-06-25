@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context="com.sleepapp.SleepTracker.app.music.MusicFragment">
 
     <ImageView
         android:id="@+id/header"
@@ -14,13 +15,16 @@
         android:layout_centerHorizontal="true"
         app:srcCompat="@drawable/music_header" />
 
+
     <TextView
         android:id="@+id/title"
+        android:text="Arabesque_No1"
         android:layout_width="match_parent"
         android:layout_height="46dp"
         android:layout_marginTop="380dp"
         android:layout_weight="1"
-        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:textColor="#000"
         android:textSize="25sp" />
 
     <LinearLayout
@@ -36,23 +40,25 @@
             android:layout_height="86dp"
             android:padding="10dp"
             android:scaleType="centerInside"
-            android:background="#FFFFFF"
+            android:background="#00000000"
             android:src="@drawable/music_last" />
+
         <ImageButton
             android:id="@+id/play"
             android:layout_width="86dp"
             android:layout_height="86dp"
+            android:background="#00000000"
             android:padding="10dp"
             android:scaleType="centerInside"
-            android:background="#FFFFFF"
             android:src="@drawable/music_play" />
+
         <ImageButton
             android:id="@+id/next"
             android:layout_width="86dp"
             android:layout_height="86dp"
             android:padding="10dp"
             android:scaleType="centerInside"
-            android:background="#FFFFFF"
+            android:background="#00000000"
             android:src="@drawable/music_next" />
     </LinearLayout>
 </RelativeLayout>

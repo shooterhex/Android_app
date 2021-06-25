@@ -1,59 +1,33 @@
-//package com.sleepapp.SleepTracker.app.music;
-//
-//import android.os.Bundle;
-//import androidx.annotation.NonNull;
-//import androidx.annotation.Nullable;
-//import android.view.LayoutInflater;
-//import android.view.View;
-//import android.view.ViewGroup;
-//
-//import com.sleepapp.SleepTracker.R;
-//import com.sleepapp.SleepTracker.base.BaseFragment;
-//
-//public class MusicFragment extends BaseFragment {
-//
-//    @Nullable
-//    @Override
-//    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-//        View view = inflater.inflate(R.layout.fragment_music, null);
-////        ImageView image = (ImageView) view.findViewById(R.id.dis_sample);             //使用ImageView显示logo
-////        image.setImageResource(R.drawable.dis_sample);
-//        return view;
-//
-//    }
-//}
-
-
 package com.sleepapp.SleepTracker.app.music;
 
-        import android.content.res.AssetFileDescriptor;
-        import android.content.res.AssetManager;
-        import android.media.AudioManager;
-        import android.media.MediaPlayer;
-        import android.net.Uri;
-        import android.os.Bundle;
-        import androidx.annotation.NonNull;
-        import androidx.annotation.Nullable;
-        import android.view.LayoutInflater;
-        import android.view.MenuInflater;
-        import android.view.View;
-        import android.view.ViewGroup;
-        import android.content.BroadcastReceiver;
-        import android.content.Context;
-        import android.content.Intent;
-        import android.content.IntentFilter;
-        import android.widget.ImageButton;
-        import android.widget.TextView;
-        import androidx.fragment.app.Fragment;
-        import com.raizlabs.android.dbflow.sql.language.Operator;
-        import com.sleepapp.SleepTracker.R;
-        import com.sleepapp.SleepTracker.base.BaseFragment;
+import android.content.res.AssetFileDescriptor;
+import android.content.res.AssetManager;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
+import android.net.Uri;
+import android.os.Bundle;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import android.view.LayoutInflater;
+import android.view.MenuInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.widget.ImageButton;
+import android.widget.TextView;
+import androidx.fragment.app.Fragment;
+import com.raizlabs.android.dbflow.sql.language.Operator;
+import com.sleepapp.SleepTracker.R;
+import com.sleepapp.SleepTracker.base.BaseFragment;
 
-        import java.io.File;
-        import java.io.IOException;
-        import java.io.InputStream;
-        import java.net.URI;
-        import java.util.Vector;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URI;
+import java.util.Vector;
 
 public class MusicFragment extends BaseFragment {
 
