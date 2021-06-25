@@ -15,15 +15,52 @@
         android:layout_marginTop="6dp"
         android:textSize="16dp" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="我的日记"
+        android:id="@+id/DiaryText"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:textSize="16dp" />
+
 
     <ListView
         android:id="@+id/PETView"
         android:layout_width="wrap_content"
-        android:layout_height="400dp"
-        android:layout_below="@+id/textView"
+        android:layout_height="200dp"
+        android:layout_below="@+id/DiaryText"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="50dp"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="10dp"
+        android:text="bbb！"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="50dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="我的睡眠建议"
+        android:id="@+id/SuggestionText"
+        android:layout_below="@+id/PETView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="6dp"
+        android:textSize="16dp" />
+
+
+    <ListView
+        android:id="@+id/SuggestionView"
+        android:layout_width="wrap_content"
+        android:layout_height="130dp"
+        android:layout_below="@+id/SuggestionText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"
         android:text="bbb！"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textSize="50dp" />
@@ -31,11 +68,11 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="功能"
+        android:text="写日记"
         android:id="@+id/addpet"
-        android:layout_below="@+id/PETView"
+        android:layout_below="@+id/SuggestionView"
         android:layout_marginTop="36dp"
-        android:onClick="addPet"
+        android:onClick="addDiary"
         android:textColor="#ffffff"
         android:textSize="20dp"
         android:background="#4B0082"

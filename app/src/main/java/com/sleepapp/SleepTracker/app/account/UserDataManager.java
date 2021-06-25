@@ -25,35 +25,36 @@ public class UserDataManager {             //用户数据管理类
 //    public static final String VIBRATE = "vibrate";
     private static final int DB_VERSION = 2;
     private Context mContext = null;
-    private static final String TABLE_NAME_PET = "pets";
-    public static final String PID = "_pid";
-    public static final String PET_NAME = "pet_name";
-    //public static final String PET_TYPE = "pet_type";
+    private static final String TABLE_NAME_SUGGESTIONS = "SUGGESTIONS";
+    public static final String SID = "_sid";
+    public static final String SUGGESTIONS_CONTENT = "content";
+
+    private static final String TABLE_NAME_DIARY = "DIARY";
+    public static final String DID = "_did";
+    public static final String DIARY_CONTENT = "content";
+
     private static UserData CurUser;
 
 
 
-    //创建用户book表
-//    private static final String DB_CREATE = "CREATE TABLE " + TABLE_NAME + " ("
-//            + USER_NAME + " varchar(255),"
-//            + USER_PWD + " varchar(255)" + ");";
-
-//    private static final String DB_CREATE = "CREATE TABLE " + TABLE_NAME + " ("
-//            + ID + " integer primary key," + USER_NAME + " varchar,"
-//            + USER_PWD + " varchar" + ");";
 
 // 用户----
     private static final String DB_CREATE = "CREATE TABLE " + TABLE_NAME + " ("
             + ID + " integer," + USER_NAME + " varchar  primary key,"
             + USER_PWD + " varchar" + ");";
 
-// 宠物----
-    private static final String DB_CREATE_PET = "CREATE TABLE " + TABLE_NAME_PET + " ("
-            + PID + " integer primary key," + PET_NAME + " varchar,"
+// 建议----
+    private static final String DB_CREATE_SUGGESTIONS = "CREATE TABLE " + TABLE_NAME_SUGGESTIONS + " ("
+            + SID + " integer primary key," + SUGGESTIONS_CONTENT + " varchar,"
+            + USER_NAME + " varchar REFERENCES users(user_name) ON DELETE CASCADE" + ");";
+
+//  日记----
+    private static final String DB_CREATE_DIARY = "CREATE TABLE " + TABLE_NAME_DIARY + " ("
+            + DID + " integer primary key," + DIARY_CONTENT + " varchar,"
             + USER_NAME + " varchar REFERENCES users(user_name) ON DELETE CASCADE" + ");";
 
     //INTEGER REFERENCES  ON DELETE CASCADE
-    private SQLiteDatabase mSQLiteDatabase = null;
+    private static SQLiteDatabase mSQLiteDatabase = null;
     private DataBaseManagementHelper mDatabaseHelper = null;
 
     //DataBaseManagementHelper继承自SQLiteOpenHelper
@@ -61,7 +62,47 @@ public class UserDataManager {             //用户数据管理类
 
         DataBaseManagementHelper(Context context) {
             super(context, DB_NAME, null, DB_VERSION);
-            //onCreate(mSQLiteDatabase);
+//            onCreate(mSQLiteDatabase);
+        }
+
+        public static void update(){
+            SQLiteDatabase db = mSQLiteDatabase;
+            boolean isopendb = db.isOpen();
+            if(!isopendb){
+                Logger.d("db is not Open");
+            }
+
+            // 初始化 UserTable
+            db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME + ";");
+            try{
+                db.execSQL(DB_CREATE);
+                Log.i(TAG, "db.execSQL(DB_CREATE)");
+            }
+            catch (SQLException e) {
+                Log.e(TAG, DB_CREATE);
+            }
+
+            // 初始化 Suggestions table
+            db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME_SUGGESTIONS + ";");
+            try{
+                db.execSQL(DB_CREATE_SUGGESTIONS);
+                Log.i(TAG, "db.execSQL(DB_CREATE_SUGGESTIONS)");
+                Logger.d("@@@db.execSQL(DB_CREATE_SUGGESTIONS)");
+            }
+            catch (SQLException e) {
+                Log.e(TAG, DB_CREATE_SUGGESTIONS);
+            }
+
+            // 初始化 diary Table
+            db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME_DIARY + ";");
+            try{
+                db.execSQL(DB_CREATE_DIARY);
+                Log.i(TAG, "db.execSQL(DB_CREATE_DIARY)");
+                Logger.d("@@@db.execSQL(DB_CREATE_DIARY)");
+            }
+            catch (SQLException e) {
+                Log.e(TAG, DB_CREATE_DIARY);
+            }
         }
 
         @Override
@@ -71,8 +112,8 @@ public class UserDataManager {             //用户数据管理类
             if(!isopendb){
                 Logger.d("db is not Open");
             }
+            // 初始化 UserTable
             db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME + ";");
-
             try{
                 db.execSQL(DB_CREATE);
                 Log.i(TAG, "db.execSQL(DB_CREATE)");
@@ -81,14 +122,26 @@ public class UserDataManager {             //用户数据管理类
                 Log.e(TAG, DB_CREATE);
             }
 
-            db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME_PET + ";");
+            // 初始化 Suggestions table
+            db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME_SUGGESTIONS + ";");
             try{
-                db.execSQL(DB_CREATE_PET);
-                Log.i(TAG, "db.execSQL(DB_CREATE_PET)");
-                Logger.d("db.execSQL(DB_CREATE_PET)");
+                db.execSQL(DB_CREATE_SUGGESTIONS);
+                Log.i(TAG, "db.execSQL(DB_CREATE_SUGGESTIONS)");
+                Logger.d("@@@db.execSQL(DB_CREATE_SUGGESTIONS)");
             }
             catch (SQLException e) {
-                Log.e(TAG, DB_CREATE_PET);
+                Log.e(TAG, DB_CREATE_SUGGESTIONS);
+            }
+
+            // 初始化 diary Table
+            db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME_DIARY + ";");
+            try{
+                db.execSQL(DB_CREATE_DIARY);
+                Log.i(TAG, "db.execSQL(DB_CREATE_DIARY)");
+                Logger.d("@@@db.execSQL(DB_CREATE_DIARY)");
+            }
+            catch (SQLException e) {
+                Log.e(TAG, DB_CREATE_DIARY);
             }
 
         }
@@ -98,6 +151,11 @@ public class UserDataManager {             //用户数据管理类
             Log.i(TAG, "DataBaseManagementHelper onUpgrade");
 
         }
+    }
+
+
+    public void update(){
+        DataBaseManagementHelper.update();
     }
 
     public UserDataManager(Context context) {
@@ -111,7 +169,7 @@ public class UserDataManager {             //用户数据管理类
         mDatabaseHelper = new DataBaseManagementHelper(mContext);
         mSQLiteDatabase = mDatabaseHelper.getWritableDatabase();
         //mDatabaseHelper.onCreate(mSQLiteDatabase);
-        //Logger.d("@DataBaseManagementHelper");
+        Logger.d("@DataBaseManagementHelper");
     }
     //关闭数据库
     public void closeDataBase() throws SQLException {
@@ -221,23 +279,23 @@ public class UserDataManager {             //用户数据管理类
     }
 
 
-    //添加新宠物
-    public long insertPetData(String userName, String PetName) {
+    //添加新日记
+    public long insertDiaryData(String userName, String DiaryName) {
         ContentValues values = new ContentValues();
         values.put(USER_NAME, userName);
-        values.put(PET_NAME, PetName);
-        return mSQLiteDatabase.insert(TABLE_NAME_PET, PID, values);
+        values.put(DIARY_CONTENT, DiaryName);
+        return mSQLiteDatabase.insert(TABLE_NAME_DIARY, DID, values);
     }
 
-    public ArrayList<String> findPetsByUserName(String userName){
-        Log.i(TAG,"findPetByUserName , userName="+userName);
+    public ArrayList<String> findDiaryByUserName(String userName){
+        Log.i(TAG,"findDiaryByUserName , userName="+userName);
         int result=0;
         Cursor mCursor;
         String userName_r ="'"+ userName+"'";
-        mCursor=mSQLiteDatabase.query(TABLE_NAME_PET, null, USER_NAME+"="+userName_r, null, null, null, null);
+        mCursor=mSQLiteDatabase.query(TABLE_NAME_DIARY, null, USER_NAME+"="+userName_r, null, null, null, null);
         ArrayList<String> petlists = new ArrayList<String>();
         while(mCursor.moveToNext()){
-            petlists.add(mCursor.getString(mCursor.getColumnIndex(PET_NAME)));
+            petlists.add(mCursor.getString(mCursor.getColumnIndex(DIARY_CONTENT)));
         }
 
         if(mCursor!=null){
@@ -247,4 +305,39 @@ public class UserDataManager {             //用户数据管理类
         }
         return petlists;
     }
+
+    //添加新建议
+    public long insertSuggestionData(String userName, String SuggestionName) {
+        ContentValues values = new ContentValues();
+        values.put(USER_NAME, userName);
+        values.put(SUGGESTIONS_CONTENT, SuggestionName);
+        return mSQLiteDatabase.insert(TABLE_NAME_SUGGESTIONS, SID, values);
+    }
+
+    //删除建议
+    public boolean deleteAllSuggestionData(String userName) {
+        String name_r = "'" + userName + "'";
+        return mSQLiteDatabase.delete(TABLE_NAME_SUGGESTIONS, USER_NAME + "=" + name_r, null) > 0;
+    }
+
+    public ArrayList<String> findSuggestionByUserName(String userName){
+        Log.i(TAG,"findSuggestionByUserName , userName="+userName);
+        int result=0;
+        Cursor mCursor;
+        String userName_r ="'"+ userName+"'";
+        mCursor=mSQLiteDatabase.query(TABLE_NAME_SUGGESTIONS, null, USER_NAME+"="+userName_r, null, null, null, null);
+        ArrayList<String> petlists = new ArrayList<String>();
+        while(mCursor.moveToNext()){
+            petlists.add(mCursor.getString(mCursor.getColumnIndex(SUGGESTIONS_CONTENT)));
+        }
+
+        if(mCursor!=null){
+            result=mCursor.getCount();
+            mCursor.close();
+            Log.i(TAG,"findUserByName , result="+result);
+        }
+        return petlists;
+    }
+
+
 }
