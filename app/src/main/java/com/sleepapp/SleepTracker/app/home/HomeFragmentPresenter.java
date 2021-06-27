@@ -220,12 +220,12 @@ public class HomeFragmentPresenter implements HomeFragmentContract.Presenter {
         datas.add(new IconTitleModel(R.mipmap.homepage_icon_card, "功能1"));
         datas.add(new IconTitleModel(R.mipmap.homepage_icon_health, "功能2"));
         datas.add(new IconTitleModel(R.mipmap.homepage_icon_notice, "功能3"));
-        datas.add(new IconTitleModel(R.mipmap.homepage_icon_pay, "功能4"));
+        datas.add(new IconTitleModel(R.mipmap.homepage_icon_discount, "功能4"));
         datas.add(new IconTitleModel(R.mipmap.homepage_icon_ill, "功能5"));
         datas.add(new IconTitleModel(R.mipmap.homepage_icon_card, "功能6"));
         datas.add(new IconTitleModel(R.mipmap.homepage_icon_health, "功能7"));
         datas.add(new IconTitleModel(R.mipmap.homepage_icon_notice, "功能8"));
-        datas.add(new IconTitleModel(R.mipmap.homepage_icon_pay, "功能9"));
+        datas.add(new IconTitleModel(R.mipmap.homepage_icon_discount, "功能9"));
         datas.add(new IconTitleModel(R.mipmap.homepage_icon_ill, "功能10"));
         return datas;
     }

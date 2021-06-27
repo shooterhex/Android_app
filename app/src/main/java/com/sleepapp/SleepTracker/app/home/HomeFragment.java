@@ -24,6 +24,7 @@ import android.widget.TextView;
 
 import com.sleepapp.SleepTracker.app.MainActivity;
 import com.sleepapp.SleepTracker.app.alarm.SecondActivity;
+import com.sleepapp.SleepTracker.app.exper.ExperFragment2;
 import com.sleepapp.domin.shop.model.ShopModel;
 import com.sleepapp.SleepTracker.MyApplication;
 import com.sleepapp.SleepTracker.R;
@@ -121,7 +122,6 @@ public class HomeFragment extends BaseFragment implements HomeFragmentContract.V
     private List<ShopModel> mShopModels = Collections.emptyList();
     boolean flag = true;
     private int lastX = 0;
-    private static final Random RANDOM = new Random();
     SimpleDateFormat sdf = new SimpleDateFormat("mm:ss");
     Timer timer;
     @Nullable
@@ -500,11 +500,7 @@ public class HomeFragment extends BaseFragment implements HomeFragmentContract.V
 
     private void addEntry(){
         long millis = System.currentTimeMillis();
-        series_realtime.appendData(new DataPoint((new Long(millis)).doubleValue(), getDataRealTime()),true, 100 );
-    }
-
-    public double getDataRealTime(){
-        return RANDOM.nextDouble()*30d;
+        series_realtime.appendData(new DataPoint((new Long(millis)).doubleValue(), ExperFragment2.getDataRealTime()),true, 100 );
     }
 
     private int getCurrentColor(float f) {

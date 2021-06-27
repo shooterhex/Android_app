@@ -28,6 +28,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
+import java.util.Random;
 
 public class ExperFragment2 extends Fragment implements View.OnClickListener {
     private NavController navController;
@@ -45,6 +46,7 @@ public class ExperFragment2 extends Fragment implements View.OnClickListener {
     private String recordFile;
 
     private Chronometer timer;
+    private static final Random RANDOM = new Random();
 
     public ExperFragment2() {
         // Required empty public constructor
@@ -190,5 +192,9 @@ public class ExperFragment2 extends Fragment implements View.OnClickListener {
         if(isRecording){
             stopRecording();
         }
+    }
+
+    static public double getDataRealTime(){
+        return RANDOM.nextDouble()*30d;
     }
 }
